@@ -1,0 +1,122 @@
+.banner-wrap
+	background: url(../img/banner/bg.png) center center repeat
+	.banner
+		+pos(rel,null)
+		&:before
+			content: ''
+			display: block
+			width: 281px
+			height: 217px
+			background: url(../img/banner/o1.png) no-repeat
+			+pos(abs, null null 0 0)
+			+transform(translate(-100%,0))
+		&:after
+			content: ''
+			display: block
+			width: 223px
+			height: 208px
+			background: url(../img/banner/o2.png) no-repeat
+			+pos(abs, null 0 0 null)
+			+transform(translate(100%,0))
+		&.brand-banner
+			.slick-dots
+				opacity: 0
+		.slick-dots
+			+pos(abs, null 15px 10px null)
+			z-index: 5
+			text-align: right
+			li
+				display: inline-block
+				width: 10px
+				height: 10px
+				+bor-rad(50px)
+				background: $white
+				cursor: pointer
+				+transition(all,0.5s)
+				&.slick-active
+					background: $orange
+				+ li
+					margin-left: 10px
+				button
+					display: none
+		.slick-prev,.slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			z-index: 5
+			+fs(0)
+			color: $white
+			opacity: 0
+			text-shadow: 0 3px 10px color-rgba($black,0.5)
+			&:before
+				content: ''
+				+fs(36rem)
+		&:hover
+			.slick-prev, .slick-next
+				opacity: 1
+		.slick-prev
+			left: 30px
+			&:before
+				content: '\f104'
+		.slick-next
+			right: 30px
+			&:before
+				content: '\f105'
+		.banner-img
+			img
+				width: 100%
+		.item
+			+pos(rel,null)
+			overflow: hidden
+			.banner-caption
+				+pos(abs, null 0 150px 0)
+				z-index: 5
+				text-align: center
+				.animated
+					animation-duration: 1s
+				.logo
+					margin-bottom: 20px
+					text-align: center
+					opacity: 0
+					+transform(translateX(-100%))
+					+transition(all,1s)
+					// transition-delay: 1s
+					img
+						display: initial
+				.caption
+					+fs(16rem)
+					font-weight: 300
+					color: $white
+					text-transform: uppercase
+					margin-bottom: 30px
+					opacity: 0
+					+transform(translateX(100%))
+					+transition(all,1s)
+					// transition-delay: 1.3s
+				.link
+					display: inline-block
+					line-height: 40px
+					background: $red
+					text-transform: uppercase
+					color: $white
+					+fs(14rem)
+					font-weight: 300
+					padding: 0px 40px
+					+bor-rad(5px)
+					opacity: 0
+					+transform(translateY(100%))
+					+transition(all,1s)
+					// transition-delay: 1.6s
+					&:hover
+						background: darken($red,10%)
+			&.slick-current
+				.banner-caption
+					.logo
+						opacity: 1
+						+transform(translateX(0))
+					.caption
+						opacity: 1
+						+transform(translateX(0))
+					.link
+						opacity: 1
+						+transform(translateY(0))
+

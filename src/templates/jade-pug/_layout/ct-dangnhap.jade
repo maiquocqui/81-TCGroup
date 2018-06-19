@@ -1,0 +1,31 @@
+section.breadcrumb-wrap
+	.container
+		ol.breadcrumb(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books')
+					span(itemprop='name') Trang chủ
+				meta(itemprop='position', content='1')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Đăng nhập
+				meta(itemprop='position', content='2')
+	.breadcrumb-img
+		img(src="img/breadcrumb/1.jpg", alt="")
+		h3.pagename
+section.login-page
+	.container
+		.login-panel
+			.login-form
+				//- .small-title.text-center Đăng nhập
+				.form-group
+					label Username
+					input#email(type="email", placeholder="Email hoặc Số điện thoại")
+				.form-group
+					label Password
+					input#password(type="password", placeholder="Mật khẩu của bạn")
+				a.forget-password(target="_blank" href="#") Quên mật khẩu?
+				a.hvr-sweep-to-right.btn-continue(href="#!") Tiếp tục
+				//- .social-login
+					.module-title Hoặc đăng nhập bằng:
+					a.facebook(href="#") <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+					a.google(href="#") <i class="fa fa-google-plus" aria-hidden="true"></i> Google

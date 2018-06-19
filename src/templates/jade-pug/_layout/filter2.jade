@@ -1,0 +1,126 @@
+section.filter-wrap2.option-group.clearfix
+	.filter-group.clearfix
+		.filter-title <i class="fa fa-th-list" aria-hidden="true"></i>
+			span Danh mục sản phẩm
+			//- .btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+		.filter-option.clearfix
+			nav.filter-category.clearfix
+				ul
+					li.hassub.active
+						a(href="#") Đồng hồ nam
+						//- .btn-showsubfilter <i class="fa fa-angle-down" aria-hidden="true"></i>
+						//- .sub
+							ul 
+								li.active
+									a(href="#") Vali nhựa
+								li 
+									a(href="#") Vali vải
+					li
+						a(href="#") Đồng hồ nữ
+					li.hassub
+						a(href="#") Đồng hồ đôi
+					li
+						a(href="#") Sản phẩm khác
+	.filter-group.clearfix
+		.filter-title <i class="fa fa-certificate" aria-hidden="true"></i>
+			span Nổi bật
+			.btn-reset ✕
+		.filter-option.clearfix
+			nav.brand-category
+				ul
+					li
+						a.active(href="#") Khuyến mại
+					li
+						a(href="#") Sản phẩm mới về
+					li
+						a(href="#") Sản phẩm nhập khẩu
+	.filter-group.clearfix
+		.filter-title <i class="fa fa-cog" aria-hidden="true"></i>
+			span Kích cỡ
+			.btn-reset ✕
+		.filter-option.clearfix
+			ul.product-size
+				li 
+					a(href="#") S
+				li
+					a.active(href="#") L
+				li 
+					a(href="#") 42
+				li
+					a.active(href="#") 47
+				li
+					a.active(href="#") 51
+				li 
+					a(href="#") 38
+				li 
+					a(href="#") 45
+				li 
+					a(href="#") 40
+				li 
+					a(href="#") 49
+				li 
+					a(href="#") Freesize
+	.filter-group.clearfix
+		.filter-title <i class="fa fa-paint-brush" aria-hidden="true"></i>
+			span Màu sắc
+			.btn-reset ✕
+		.filter-option.clearfix
+			ul.color-picker
+				li.color
+					a.active(href="#!")
+						.color-img(style='background-color:#990099')
+						.color-name Tím
+				li.color
+					a.active(href="#!")
+						.color-img(style='background-color:#0000CC')
+						.color-name Xanh đại dương
+				li.color
+					a(href="#!")
+						.color-img(style='background-color:#8B8994')
+						.color-name Xám
+				li.color
+					a(href="#!")
+						.color-img(style='background-color:#CC0033')
+						.color-name Đỏ đô
+				li.color
+					a(href="#!")
+						.color-img(style='background-color:#D3CEBB')
+						.color-name Cafe
+				li.color
+					a.active(href="#!")
+						.color-img(style='background-color:#A3E3D3')
+						.color-name Xanh nhạt
+				//- li.color
+					a
+						.color-img(style='background-color:#FFFFFF')
+						.color-name Trắng
+				li.color
+					a(href="#!")
+						.color-img(style='background-color:#5A5653')
+						.color-name Xám không gian
+				li.color
+					a.active(href="#!")
+						.color-img(style='background-color:#D2D0D1')
+						.color-name Xám nhạt
+
+	.filter-group.clearfix
+		.filter-title <i class="fa fa-usd" aria-hidden="true"></i>
+			span Khoảng giá
+			.btn-reset ✕
+		.filter-option.clearfix
+			.filter-range
+				#slider-range.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all(aria-disabled='false')
+					.ui-slider-range.ui-widget-header.ui-corner-all(style='left: 0%; width: 100%;')
+					a.ui-slider-handle.ui-state-default.ui-corner-all(href='#', style='left: 0%;')
+					a.ui-slider-handle.ui-state-default.ui-corner-all(href='#', style='left: 100%;')
+				.price-range
+					| Giá từ
+					.sliderValue.min-input(data-index='0') 0
+					| đến
+					.sliderValue.max-input(data-index='1') 100.000.000
+				.hidden
+					a.urlwithoutprice(href='#')
+					a.urlwithprice(href='#')
+					a.pricemin
+					a.pricemax
+	.btn-closefilter.btn-close <span class="lnr lnr-cross"></span> Đóng bộ lọc

@@ -1,0 +1,89 @@
+section.breadcrumb-wrap
+	.container
+		ol.breadcrumb(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books')
+					span(itemprop='name') Trang chủ
+				meta(itemprop='position', content='1')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Giỏ hàng
+				meta(itemprop='position', content='2')
+	.breadcrumb-img
+		img(src="img/breadcrumb/1.jpg", alt="")
+		h3.pagename
+.container
+	.row.flex.flex-wrap
+		.col-12
+			section.cartstep.clearfix
+				.step.active.finish
+					.number 1
+					.name Đăng nhập
+				.step.active.finish
+					.number 2
+					.name Giỏ hàng
+				.step.active.finish
+					.number 3
+					.name Thông tin
+				.step.active.finish
+					.number 4
+					.name Thanh toán
+	section.cart-page.clearfix
+		.row.flex.flex-wrap
+			.col-12.col-lg-5.col-xl-4
+				.thankyou.text-xs-center.clearfix
+					img(src="img/cart/finish.bak2.png", alt="")
+			.col-12.col-lg-7.col-xl-8
+				.payment-success.clearfix
+					h1.notice
+						<i class="fa fa-check-circle" aria-hidden="true"></i> 
+						span ĐƠN HÀNG CỦA BẠN ĐÃ ĐƯỢC HOÀN TẤT!
+					.letter 
+						p Xin cảm ơn quý khách đã mua hang tại website 
+							a(href="http://tcgroup.com.vn") tcgroup.com.vn
+							|. Thông tin chi tiết đơn hàng đã được gửi đến hộp mail của quý khách. Mọi thắc mắc xin vui lòng liên hệ:
+						ul 
+							li Hotline: 
+								a(href="tel:1900 7188") 1900 7188
+							li Email: 
+								a(href="mailto:info@tcgroup.com.vn") info@tcgroup.com.vn
+					.cart-info
+						.info-overview
+							.info-col Đơn hàng: 
+								strong #354599438
+							.info-col Ngày đặt: 
+								strong 05/08/2017
+							.info-col Tình trạng: 
+								strong Đang xử lý
+						table.cart-finish-table
+							tr 
+								th Mã sản phẩm
+								th Tên sản phẩm
+								th Đơn giá
+								th Số lượng
+							tr 
+								td #315406
+								td Khóa cửa điện tử
+								td 10.000.000 đ
+								td x 1
+							tr 
+								td #315407
+								td Khóa cửa điện tử
+								td 12.000.000 đ
+								td x 1
+						.total-overview
+							.overview-col Tổng số tiền: 
+								strong 22.000.000đ
+							//- .overview-col Đã thanh toán: 
+								strong 10.000.000đ
+							//- .overview-col Còn lại: 
+								strong 12.000.000đ
+					.receive-address
+						.title Địa chỉ nhận hàng
+						ul
+							li Nguyễn Văn Toàn
+							li 156 Nguyễn Văn Thủ, Hồ Chí Minh-Quận 1-Phường Đa Kao
+							li 0981 456 789
+				.btn-wrap
+					a.btn-back(href="#!") Tiếp tục mua hàng
+					a.hvr-sweep-to-right.btn-continue(href="#!") Quản lý đơn hàng

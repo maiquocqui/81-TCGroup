@@ -1,0 +1,65 @@
+.breadcrumb-wrap
+	ol.breadcrumb
+		margin: 0
+		padding: 20px 0
+		background: none
+		+bor-rad(0)
+		li
+			display: inline-block
+			color: darken($white,40%)
+			+ li
+				&:before
+					content: '\f105'
+					margin: 0px 5px
+			&:last-child
+				a
+					color: $main
+			a
+				+fs(13rem)
+				color: darken($white,40%)
+				&:hover
+					color: $blue
+	.breadcrumb-img
+		+pos(rel,null)
+	.pagename
+		+fs(36rem)
+		text-transform: uppercase
+		font-weight: 500
+		color: $white
+		+pos(abs, 0 null 0 0)
+		right: 0
+		+flexbox
+		justify-content: center
+		align-items: center
+		align-content: center
+.breadcrumb-wrap2
+	+pos(rel,null)
+	.breadcrumb-img
+	.breadcrumb-content
+		+pos(abs,60px 0 null 0)
+		text-align: center
+	ol.breadcrumb
+		margin: 0 0 15px
+		padding: 0
+		background: none
+		+bor-rad(0)
+		text-align: center
+		li
+			display: inline-block
+			color: darken($white,40%)
+			+ li
+				&:before
+					content: '\f105'
+					margin: 0px 5px
+			a
+				+fs(14rem)
+				font-weight: 600
+				color: $white
+				text-transform: uppercase
+				&:hover
+					color: $blue
+	.pagename
+		+fs(48rem)
+		// text-transform: uppercase
+		font-weight: 100
+		color: $white

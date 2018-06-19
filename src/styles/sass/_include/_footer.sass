@@ -1,0 +1,139 @@
+.page-feature
+	border-top: 1px solid darken($white,10%)
+	border-bottom: 1px solid darken($white,10%)
+	.feature-list
+		border-left: 1px solid darken($white,10%)
+		.feature
+			border-right: 1px solid darken($white,10%)
+			figure
+				padding: 20px 15px
+				.feature-img
+					+flexbox
+					justify-content: center
+					align-items: center
+					align-content: center
+					height: 90px
+					a
+						+ a
+							margin-left: 5px
+					img
+						max-width: 100%
+						max-height: 100%
+				figcaption
+					text-align: center
+					.feature-name
+						+fs(16rem)
+						font-weight: 500
+						margin-bottom: 10px
+					.feature-des
+						+fs(13rem)
+						color: darken($white,40%)
+
+footer
+	.footer-top
+		padding: 40px 0
+		background: darken($white,4%)
+		.footer-col
+			.company, .title
+				+fs(15rem)
+				font-weight: 700
+				margin-bottom: 15px
+			.contact-info
+				+fs(13rem)
+				line-height: 1.8
+				color: darken($white,40%)
+				a
+					color: darken($white,40%)
+					&:hover
+						color: $blue
+			.footer-link
+				a
+					display: block
+					+fs(13rem)
+					line-height: 1.8
+					+fs(13rem)
+					color: darken($white,40%)
+					&:hover
+						color: $blue
+			.subscribe-wrap
+				margin-bottom: 20px
+				.module-title
+					+fs(13rem)
+					line-height: 1.8
+					color: darken($white,40%)
+					margin-bottom: 10px
+				.subscribe
+					.subcribefrm
+						+bor-rad(50px)
+						overflow: hidden
+						+flexbox
+						background: $white
+						padding: 1px
+						input
+							width: calc(100% - 38px)
+							+fs(13rem)
+							line-height: 38px
+							color: darken($white,40%)
+							background: none
+							border: none
+							margin: 0
+							padding: 0 20px
+						.subcribebutton
+							width: 38px
+							height: 38px
+							line-height: 38px
+							text-align: center
+							color: $white
+							background: $orange
+							+bor-rad(50px)
+							+fs(0rem)
+							&:before
+								content: '\f061'
+								+fs(14rem)
+			.social
+				+flexbox
+				margin-bottom: 20px
+				a
+					display: block
+					width: 32px
+					height: 32px
+					line-height: 32px
+					text-align: center
+					+bor-rad(50px)
+					background: $white
+					+fs(16rem)
+					color: darken($white,40%)
+					+ a
+						margin-left: 10px
+					&:hover
+						background: $blue
+						color: $white
+	.footer-bottom
+		background: $blue
+		padding: 25px 0
+		.col-left,.col-right
+			padding: 0px 15px
+			flex: auto
+		.sitemap
+			a
+				+fs(12rem)
+				color: color-rgba($white,0.8)
+				+ a
+					&:before
+						content: '|'
+						margin: 0px 5px
+				&:hover
+					color: $white
+		.copyright
+			+fs(12rem)
+			color: color-rgba($white,0.8)
+		.payment-method
+			height: 100%
+			+flexbox
+			justify-content: flex-end
+			align-items: center
+			align-content: center
+			label
+				+fs(12rem)
+				color: color-rgba($white,0.8)
+				margin-right: 10px

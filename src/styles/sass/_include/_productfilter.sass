@@ -1,0 +1,409 @@
+.brand-group
+	+media-breakpoint-down(md)
+		display: none
+// .brand-logo
+// 	display: flex
+// 	height: 150px
+// 	justify-content: center
+// 	align-items: center
+// 	// border-top: 1px solid darken($white,10%)
+// 	img 
+// 		max-width: 80%
+// 		max-height: 80%
+.btn-togglewrap
+	+pos(fix, null 0 0 0)
+	z-index: 50
+	+flexbox
+	background: $white
+	border-top: 1px solid darken($white,15%)
+	.btn-showcate, .btn-showfilter
+		text-align: center
+		line-height: 40px
+		padding: 0px
+		width: 100%
+		&.active
+			background: darken($white,5%)
+	.btn-showcate
+		&:before
+			content: '\f00b'
+			font-family: 'fontawesome'
+			margin-right: 10px
+			line-height: 1
+			// +fs(18rem)
+			display: inline-block
+			vertical-align: middle
+			+media-breakpoint-down(xs)
+				// +fs(15rem)
+				margin-right: 5px
+	.btn-showfilter
+		border-left: 1px solid darken($white,15%)
+		&:before
+			content: '\f013'
+			font-family: 'fontawesome'
+			margin-right: 10px
+			line-height: 1
+			// +fs(18rem)
+			display: inline-block
+			vertical-align: middle
+			+media-breakpoint-down(xs)
+				// +fs(15rem)
+				margin-right: 5px
+.btn-closefilter
+	+pos(abs, 30px 30px null null)
+	+fs(24rem)
+	color: $main
+	+transition(all,0.3s)
+	line-height: 1
+	display: none
+	&:hover
+		color: $dred
+	+media-breakpoint-down(md)
+		// display: block
+	+media-breakpoint-down(sm)
+		top: 15px
+		right: 15px
+	+media-breakpoint-down(xs)
+	&.btn-close
+		+pos(static,unset)
+		border: 1px solid lighten($red,40%)
+		background: lighten($red,48%)
+		+fs(14rem)
+		text-align: center
+		padding: 8px 0
+		+bor-rad(3px)
+		color: $red
+		+media-breakpoint-down(md)
+			display: block
+		&:hover
+			color: $dred
+			border-color: $dred
+			background: lighten($dred,45%)
+.filter-col
+	.title
+		+fs(14rem)
+		text-transform: uppercase
+		font-weight: 600
+		color: $main
+		line-height: 50px
+.filter-wrap
+	background: darken($white,4%)
+	border: 1px solid darken($white,10%)
+	padding: 0px 25px
+	margin-bottom: 30px
+	+media-breakpoint-down(md)
+		margin: 0
+		
+		+pos(fix, 60px null 41px 0)
+		z-index: 70
+		right: 0
+		background: $white
+		overflow: auto
+		padding: 30px 200px
+		+transform(translateY(-130%))
+		+transition(all,0.5s)
+		// opacity: 0
+		visibility: hidden
+		&.open
+			+transform(translateY(0%))
+			// opacity: 1
+			visibility: visible
+	+media-breakpoint-down(sm)
+		padding: 30px 100px
+	+media-breakpoint-down(xs)
+		padding: 15px
+	.filter-group
+		padding-bottom: 15px
+		border-bottom: 1px solid darken($white,10%)
+		&:before, &:after
+			content: ''
+			display: table
+			width: 100%
+			clear: both
+		.btn-reset
+			+pos(abs, 0px 0px null null)
+			width: 24px
+			display: none
+			background: $white
+			height: 24px
+			line-height: 24px
+			+fs(10rem)
+			z-index: 2
+			text-align: center
+			cursor: pointer
+			+transition(all,0.3s)
+			color: darken($white,40%)
+			&:hover
+				color: $dred
+	.filter-title
+		+pos(rel,null)
+		&:before
+			content: '\f107'
+			color: $blue
+			font-weight: 700
+			margin-right: 5px
+		span 
+			display: inline-block
+			font-weight: 600
+			text-transform: uppercase
+			+fs(13rem)
+			line-height: 44px
+			+pos(rel,null)
+			z-index: 1
+			color: darken($white,60%)
+	.filter-option
+		+bor-rad(5px)
+	.filter-category
+		padding: 10px 15px
+		background: darken($white,3%)
+		> ul 
+			> li 
+				+pos(rel,null)
+				> a 
+					display: block
+					color: darken($white,40%)
+					// font-weight: 700
+					+fs(14rem)
+					+pos(rel,null)
+					padding: 2px 0
+					&:before
+						content: '\f105'
+						margin-right: 10px
+					// &:before 
+					// 	content: ''
+					// 	display: block
+					// 	width: 14px
+					// 	height: 14px
+					// 	border: 1px solid color-rgba($black,0.2)
+					// 	+pos(abs, 5px null null 0)
+					// &:after
+					// 	content: '\f00c'
+					// 	color: $red
+					// 	display: block
+					// 	width: 14px
+					// 	height: 14px
+					// 	+fs(14rem)
+					// 	font-weight: normal
+					// 	text-align: center
+					// 	line-height: 10px
+					// 	+pos(abs, 6px null null 0)
+					// 	opacity: 0
+				&:hover
+					> a 
+						color: $black
+				&.active
+					> a 
+						color: $black
+						font-weight: 500
+						// &:after
+						// 	opacity: 1
+					.sub
+						display: block
+				.btn-showsubfilter
+					+pos(abs, 0px 0 null null)
+					// width: 30px
+					height: 30px
+					line-height: 30px
+					text-align: center
+					cursor: pointer
+				.sub
+					padding: 5px 15px
+					background: darken($white,3%)
+					+bor-rad(5px)
+					display: none
+					ul
+						li 
+							padding: 2px 0
+							a
+								display: block
+								+fs(13rem)
+								+pos(rel,null)
+								color: darken($white,60%)
+								padding-left: 25px
+								&:before 
+									content: ''
+									display: block
+									width: 14px
+									height: 14px
+									border: 1px solid darken($white,20%)
+									+pos(abs, 2px null null 0)
+								&:after
+									content: '\f00c'
+									color: $dred
+									display: block
+									width: 14px
+									height: 14px
+									+fs(12rem)
+									text-align: center
+									line-height: 1
+									+pos(abs, 3px null null 0)
+									opacity: 0
+							&:hover
+								> a 
+									color: $gray
+							&.active
+								> a 
+									color: $gray
+									font-weight: 500
+									&:after
+										opacity: 1
+	.filter-ajax
+		&::-webkit-scrollbar-track
+			background-color: darken($white,10%)
+		&::-webkit-scrollbar
+			width: 5px
+			background-color: darken($white,10%)
+		&::-webkit-scrollbar-thumb
+			background-color: darken($white,40%)
+		> ul 
+			> li 
+				+pos(rel,null)
+				margin-bottom: 5px
+				> a 
+					display: block
+					color: darken($white,40%)
+					background: $white
+					+fs(13rem)
+					padding: 7px 20px
+					box-shadow: 0px 2px 5px color-rgba($black,0.1)
+					+pos(rel,null)
+					&:before
+						content: '\f00c'
+						color: $green
+						opacity: 0
+						+pos(abs, 7px null null 5px)
+					&:hover
+						color: $white
+						background: $blue
+					&.active
+						color: $blue
+						font-weight: 600
+						&:before
+							opacity: 0.8
+						&:hover
+							background: $white
+
+	.product-size
+		display: flex
+		flex-wrap: wrap
+		justify-content: flex-start
+		.size, li
+			margin-right: 15px
+			margin-bottom: 15px
+			a 
+				display: block
+				font-weight: 600
+				color: darken($white,40%)
+				+fs(14rem)
+				&:hover
+					color: $orange
+				&.active
+					color: $orange
+					font-weight: 800
+	.color-picker
+		display: flex
+		flex-wrap: wrap
+		justify-content: flex-start
+		// margin: 0 -10px
+		.color
+			width: 100%
+			// width: 50%
+			// padding: 0px 10px
+			a
+				+flexbox
+				padding: 5px 0
+				.color-img
+					width: 14px
+					height: 14px
+					+bor-rad(50px)
+					+pos(rel,null)
+					border: 1px solid darken($white,10%)
+				.color-name
+					+fs(13rem)
+					line-height: 14px
+					margin-left: 10px
+					color: darken($white,40%)
+				&:hover
+					.color-name
+						color: $black
+				&.active
+					.color-img
+						border-color: $red
+					.color-name
+						color: $black
+						font-weight: 500
+	.price-select
+		select
+			padding: 7px 15px
+			width: 100%
+			+fs(14rem)
+			// +bor-rad(5px)
+			border: 1px solid darken($white,20%)
+	.filter-range
+		// width: 100%
+		margin: 0px 10px
+		+pos(rel,null)
+		&:before, &:after
+			content: ''
+			display: table
+			width: 100%
+			clear: both
+		#slider-range
+			width: 100%
+			height: 4px
+			background: darken($white,10%)
+			margin: 15px 0 15px
+			+pos(rel,null)
+			+transition(all,0s)
+		.ui-widget-header
+			background: $orange
+			position: absolute
+			z-index: 1
+			display: block
+			top: 0px
+			height: 4px
+			+transition(all,0s)
+		.ui-slider-handle
+			position: absolute
+			z-index: 2
+			cursor: default
+			touch-action: none
+			top: 2px
+			margin-left: -0.6em
+			left: 15%
+			width: 14px
+			height: 14px
+			+bor-rad(50%)
+			background: $white
+			border: 2px solid $orange
+			z-index: 1
+			cursor: pointer
+			+transition(all,0s)
+			+transform(translateY(-50%))
+			&:hover
+				background: $orange
+		.min, .max
+			width: 16px
+			height: 16px
+			background: darken($white,60%)
+			box-shadow: 0px 0px 5px -1px rgba(0,0,0,.7)
+			z-index: 1
+			cursor: pointer
+			+transition(all,0.5s)
+			+transform(translateY(-50%))
+			&:hover
+				background: $main
+		.min
+			+pos(abs, 50% null null 0)
+		.max 
+			+pos(abs, 50% 0 null null)
+	.price-range
+		// text-transform: uppercase
+		+fs(13rem)
+		// font-weight: bold
+		margin-left: -10px
+	.min-input, .max-input
+		display: inline-block
+		margin: 0 5px
+		font-weight: bold
+		+fs(14rem)
+		color: $orange

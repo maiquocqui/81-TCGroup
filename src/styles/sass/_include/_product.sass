@@ -1,0 +1,917 @@
+@keyframes prnew
+	0%
+		background: $orange
+	50%
+		background: $yellow
+	100%
+		background: $orange
+@keyframes prsale
+	0%
+		background: $dred
+	50%
+		background: $red
+	100%
+		background: $dred
+// .col-left
+// 	width: 280px
+// 	padding: 0px 15px
+// 	// margin-top: 20px
+// 	+media-breakpoint-down(lg)
+// 		width: 230px
+// 	+media-breakpoint-down(md)
+// 		width: 0
+// 		margin: 0
+// .col-main
+// 	width: calc(100% - 280px)
+// 	padding: 0px 15px
+// 	// border-left: 1px solid darken($white,10%)
+// 	// margin-top: 20px
+// 	+media-breakpoint-down(lg)
+// 		width: calc(100% - 230px)
+// 	+media-breakpoint-down(md)
+// 		width: 100%
+// 		border-left: none
+
+.bannerads
+	margin-bottom: 20px
+	overflow: hidden
+	+media-breakpoint-down(sm)
+		margin-bottom: 10px
+	.slick-prev,.slick-next
+		+pos(abs,50% null null null)
+		+transform(translateY(-50%))
+		+fs(0)
+		z-index: 5
+		color: $white
+		opacity: 0
+		&:before
+			content: ''
+			+fs(32rem)
+	&:hover
+		.slick-prev,.slick-next
+			opacity: 1
+	.slick-prev
+		left: 15px
+		&:before
+			content: '\f104'
+	.slick-next
+		right: 15px
+		&:before
+			content: '\f105'
+	.slick-dots
+		+pos(abs, null 30px 10px null)
+		opacity: 0
+		li
+			display: inline-block
+			width: 10px
+			height: 10px
+			+bor-rad(50px)
+			background: $white
+			cursor: pointer
+			+transition(all,0.5s)
+			&.slick-active
+				background: $red
+			+ li
+				margin-left: 8px
+			button
+				display: none
+
+.category-info
+	+flexbox
+	justify-content: space-between
+	.cate-name
+		+fs(18rem)
+		line-height: 30px
+		font-weight: 700
+		color: $blue
+		text-transform: uppercase
+		padding: 10px 0
+	.col-right
+		+flexbox
+		align-items: center
+		align-content: center
+		label
+			+fs(13rem)
+			font-weight: 500
+			color: darken($white,40%)
+			margin-right: 5px
+		.change-view
+			+flexbox
+			align-items: center
+			align-content: center
+			padding-right: 20px
+			.btn-changeview
+				+flexbox
+				a
+					+fs(20rem)
+					color: darken($white,40%)
+					margin-left: 10px
+					&:hover
+						color: $orange
+					&.active
+						color: $main
+		.product-sort
+			+flexbox
+			align-items: center
+			align-content: center
+			padding-left: 20px
+			border-left: 1px solid darken($white,10%)
+			select
+				appearance: none
+				-webkit-appearance: none
+				-moz-appearance: none
+				+fs(14rem)
+				font-weight: 600
+				border: none
+				color: $main
+				margin-left: 10px
+				cursor: pointer
+				&:hover
+					color: $orange
+.product-list
+	.product-col
+		height: 100%
+		background: $white
+		figure
+			padding: 10px
+			+pos(rel,null)
+			.promotion
+				+pos(abs, 10px null null 10px)
+				+fs(11rem)
+				font-weight: 500
+				color: $white
+				padding: 2px 5px
+				text-transform: uppercase
+				// +bor-rad(5px)
+				&.sale
+					background: $orange
+				&.new
+					background: $blue
+				&.hot
+					background: $amber
+			.product-img
+				+flexbox
+				justify-content: center
+				align-items: center
+				height: 180px
+				img
+					max-width: 90%
+					max-height: 90%
+			figcaption
+				text-align: center
+				padding: 0px 40px
+				.product-name
+					+fs(15rem)
+					line-height: 1.4
+					font-weight: 600
+					text-transform: uppercase
+					margin-bottom: 5px
+					display: -webkit-box
+					height: 0.9375rem*1.4*2
+					-webkit-line-clamp: 2
+					-webkit-box-orient: vertical
+					overflow: hidden
+					text-overflow: ellipsis
+					a
+						color: $main
+				.product-price
+					.new
+						+fs(17rem)
+						color: $blue
+						font-weight: 600
+						line-height: 1.3
+					.old
+						+fs(15rem)
+						text-decoration: line-through
+						color: darken($white,40%)
+						font-weight: 500
+						line-height: 1.3
+				.btn-wrap
+					+pos(abs,0 null 0 0)
+					right: 0
+					+flexbox
+					justify-content: center
+					align-items: center
+					align-content: center
+					z-index: 5
+					visibility: hidden
+					opacity: 0
+					+transition(all,0.5s)
+					.btn-buy
+						display: block
+						line-height: 40px
+						color: $white
+						background: $blue
+						padding: 0px 15px
+						+bor-rad(50px 0 0 50px)
+						+fs(20rem)
+						box-shadow: 0px 10px 20px -10px color-rgba($black,0.5)
+						&:hover
+							background: $orange
+					.btn-viewdetail
+						display: block
+						line-height: 40px
+						color: $white
+						background: $blue
+						white-space: nowrap
+						border-left: 1px solid $white
+						padding: 0px 20px
+						+bor-rad(0px 50px 50px 0px)
+						+fs(13rem)
+						font-weight: 600
+						text-transform: uppercase
+						box-shadow: 0px 10px 20px -10px color-rgba($black,0.5)
+						&:hover
+							background: $orange
+			&:hover
+				.btn-wrap
+					visibility: visible
+					opacity: 1
+.product-page
+	.product-list
+		border-top: 1px solid darken($white,10%)
+		border-left: 1px solid darken($white,10%)
+		.row
+			margin: 0px 0px
+		.col-6
+			padding: 0px 0px
+		.product-col
+			border-right: 1px solid darken($white,10%)
+			border-bottom: 1px solid darken($white,10%)
+	.product-detail
+		padding-top: 50px
+	.slide-wrap
+		+flexbox
+		margin-bottom: 30px
+		.product-slide
+			width: calc(100% - 82px)
+			.item 
+				.fancybox
+					+flexbox
+					width: 100%
+					height: 500px
+					justify-content: center
+					align-items: center
+					img 
+						max-width: 100%
+						max-height: 100%
+		.nav-wrap
+			width: 82px
+			.product-nav
+				width: 82px
+				.slick-prev, .slick-next
+					+fs(0)
+					display: block
+					width: 100%
+					text-align: center
+					line-height: 1
+					color: darken($white,40%)
+					+media-breakpoint-down(xs)
+						+pos(abs, 50% null null null)
+						+transform(translateY(-50%))
+						z-index: 5
+						width: unset
+					&:hover
+						color: $main
+					&:before
+						content: ''
+						+fs(24rem)
+				.slick-prev
+					+media-breakpoint-down(xs)
+						left: 0
+					&:before
+						content: '\f106'
+						+media-breakpoint-down(xs)
+							content: '\f104'
+				.slick-next
+					+media-breakpoint-down(xs)
+						right: 0
+					&:before
+						content: '\f107'
+						+media-breakpoint-down(xs)
+							content: '\f105'
+				.item
+					padding: 5px 0
+					.img
+						width: 80px
+						height: 80px
+						+flexbox
+						justify-content: center
+						align-items: center
+						border: 1px solid darken($white,10%)
+						cursor: pointer
+						overflow: hidden
+						+transition(all,0.5s)
+						img 
+							max-width: 80%
+							width: 80%
+					&.slick-current
+						.img 
+							border-color: $blue
+			.btn-video
+				display: block
+				+pos(rel,null)
+				img
+					width: 100%
+				&:before
+					content: '\f03d'
+					+pos(abs, 0 null 0 0)
+					right: 0
+					background: color-rgba($black,0.5)
+					+flexbox
+					justify-content: center
+					align-items: center
+					+fs(24rem)
+					color: $white
+	.product-info
+		+pos(rel,null)
+		margin-bottom: 30px
+		+media-breakpoint-down(md)
+			margin-bottom: 10px
+		.promotion
+			+pos(abs, 3px null null -30px)
+			+transform(translateX(-100%))
+			color: $white
+			z-index: 5
+			// +bor-rad(3px)
+			// font-weight: 700
+			padding: 3px 10px
+			+fs(13rem)
+			text-transform: uppercase
+			+media-breakpoint-down(md)
+				+pos(static,unset)
+				display: inline-block
+				+transform(translateX(0))
+				margin-bottom: 5px
+				+fs(12rem)
+				padding: 2px 8px
+			&.new
+				background: $blue
+			&.sale
+				background: $red
+		.product-name
+			+fs(24rem)
+			text-transform: uppercase
+			font-weight: 600
+			color: $main
+			line-height: 1.3
+			margin-bottom: 5px
+			+media-breakpoint-down(lg)
+				+fs(22rem)
+				margin-bottom: 0
+		.product-category
+			+fs(14rem)
+			color: darken($white,40%)
+		.product-id
+			+fs(14rem)
+			color: darken($white,40%)
+			margin-bottom: 15px
+			a
+				color: $main
+		.product-overview
+			border: 1px solid darken($white,10%)
+			padding: 20px
+			color: darken($white,60%)
+			margin-bottom: 20px
+			ul
+				+flexbox
+				flex-wrap: wrap
+				li
+					+pos(rel,null)
+					+fs(14rem)
+					line-height: 1.8
+		.product-price
+			+flexbox
+			margin-bottom: 15px
+			.new
+				+fs(24rem)
+				font-weight: 600
+				color: $black
+				margin-right: 10px
+				+media-breakpoint-down(lg)
+					+fs(22rem)
+			.old
+				+fs(18rem)
+				text-decoration: line-through
+				color: darken($white,20%)
+				margin-top: 7px
+				+media-breakpoint-down(lg)
+					+fs(16rem)
+					margin-top: 6px
+		.product-color, .product-size
+			width: 100%
+			// margin-bottom: 10px
+			+media-breakpoint-down(md)
+				width: 50%
+			+media-breakpoint-down(xs)
+				width: 100%
+				margin-bottom: 0
+			.label 
+				+fs(12rem)
+				font-weight: 500
+				color: $main
+				text-transform: uppercase
+				margin-bottom: 5px
+				+media-breakpoint-down(md)
+					+fs(12rem)
+					margin-bottom: 5px
+			.color
+				display: inline-block
+				margin-right: 5px
+				margin-bottom: 5px
+				a 
+					display: block
+					width: 28px
+					height: 28px
+					+bor-rad(50px)
+					// opacity: 0.5
+					border: 2px solid darken($white,20%)
+					+pos(rel,null)
+					&:before
+						content: ''
+						display: block
+						border: 3px solid $white
+						+bor-rad(50px)
+						+pos(abs, 0 null 0 0)
+						right: 0
+					&:hover
+						border-color: darken($white,40%)
+					&.disable
+						opacity: 0.2
+						border-color: darken($white,20%)
+					&.active
+						opacity: 1
+						border-color: $black
+		.input-number
+			+bor-rad(50px)
+			overflow: hidden
+			.btn-spin
+				width: 40px
+				height: 30px
+				line-height: 30px
+			input
+				width: 40px
+				padding: 0px
+				line-height: 30px
+				border-left: 1px solid darken($white,10%)
+				border-right: 1px solid darken($white,10%)
+		.btn-wrap
+			+flexbox
+			align-items: center
+			align-content: center
+			margin-bottom: 20px
+			label
+				+fs(13rem)
+				color: darken($white,60%)
+				font-weight: 500
+				margin-right: 20px
+			.btn-buy
+				display: block
+				padding: 0px 30px
+				+bor-rad(50px)
+				line-height: 40px
+				+fs(15rem)
+				text-transform: uppercase
+				font-weight: 600
+				color: $white
+				background: $blue
+				margin-left: 20px
+				overflow: hidden
+				&:before
+					background: color-rgba($white,0.1)
+					+bor-rad(50px)
+				&:hover
+					
+			.btn-wishlist
+				display: inline-block
+				width: 40px
+				height: 40px
+				line-height: 40px
+				text-align: center
+				color: $black
+				background: none
+				border: 1px solid $black
+				// +bor-rad(50px)
+				margin-left: 10px
+				+fs(18rem)
+				+media-breakpoint-down(md)
+					margin-left: 5px
+				+media-breakpoint-down(sm)
+					display: block
+				&:hover
+					border-color: lighten($red,20%)
+					background: lighten($red,20%)
+					color: $white
+				&.active
+					border-color: lighten($red,20%)
+					background: lighten($red,20%)
+					color: $white
+			.buy-support
+				+fs(14rem)
+				display: block
+				color: darken($white,60%)
+				padding: 10px 0
+				+media-breakpoint-down(sm)
+					display: none
+				&:after
+					content: '\f105'
+					margin-left: 5px
+				&:hover
+					color: $red
+		.share
+			+flexbox
+			align-items: center
+			align-content: center
+			label
+				+fs(13rem)
+				color: darken($white,60%)
+				font-weight: 500
+				margin-right: 20px
+			a
+				display: block
+				width: 32px
+				height: 32px
+				line-height: 32px
+				text-align: center
+				+bor-rad(50px)
+				+fs(16rem)
+				// color: darken($white,40%)
+				background: darken($white,8%)
+				+ a
+					margin-left: 5px
+				&:hover
+					// color: $blue
+			+media-breakpoint-down(lg)
+				margin-bottom: 15px
+	.product-description
+		margin-bottom: 50px
+		.product-tabs
+			background: $white
+		.tabs-list
+			border-bottom: 1px solid darken($white,10%)
+			border-left: 1px solid darken($white,10%)
+			+flexbox
+			.tab-item
+				border-top: 1px solid darken($white,10%)
+				border-right: 1px solid darken($white,10%)
+				border-bottom: 1px solid darken($white,10%)
+				background: darken($white,5%)
+				margin-bottom: -1px
+				a
+					display: block
+					+fs(15rem)
+					text-transform: uppercase
+					font-weight: 500
+					line-height: 50px
+					padding: 0px 20px
+					color: $main
+					&.mPS2id-highlight
+						background: $white
+						border-bottom-color: $white
+						font-weight: 600
+						color: $blue
+		.r-tabs-accordion-title
+			margin-top: 10px
+			a
+				display: block
+				background: darken($white,5%)
+				color: $main
+				+fs(14rem)
+				font-weight: 500
+				padding: 10px 20px
+				+pos(rel,null)
+				&:after
+					content: '\f107'
+					display: block
+					+pos(abs, 10px 20px null null)
+					+transition(all,0.3s)
+			&.r-tabs-state-active
+				a
+					background: darken($white,15%)
+					color: $red
+					&:after
+						+transform(scaleY(-1))
+		.tab-content
+			padding-top: 30px
+			.tab-title
+				+fs(18rem)
+				font-weight: 700
+				text-transform: uppercase
+				margin-bottom: 10px
+			.content
+				// border: 1px solid darken($white,10%)
+				// padding: 30px
+			.fb-comment
+				+flexbox
+				justify-content: center
+		.title
+			+pos(rel,null)
+			margin: 20px 0
+			&:after
+				content: ''
+				display: block
+				width: 100%
+				height: 1px
+				background: color-rgba($black,0.1)
+				+pos(abs, 50% 0 null 0)
+			span
+				display: inline-block
+				+fs(16rem)
+				text-transform: uppercase
+				font-weight: 500
+				background: $white
+				padding-right: 15px
+				+pos(rel,null)
+				z-index: 5
+		table.product-table
+			border-left: 1px solid darken($white,15%)
+			border-top: 1px solid darken($white,15%)
+			min-width: 500px
+			margin-bottom: 15px
+			+media-breakpoint-down(xs)
+				min-width: unset
+				width: 100%
+			td 
+				border-bottom: 1px solid darken($white,15%)
+				border-right: 1px solid darken($white,15%)
+				padding: 10px
+				color: $main
+				+fs(14rem)
+				&:first-child
+					background: darken($white,3%)
+					font-weight: 500
+		.video
+			+media-breakpoint-down(xs)
+				iframe
+					height: 200px
+		.feature-list
+			+flexbox
+			flex-wrap: wrap
+			justify-content: center
+			margin: 30px 0
+			.module-title
+				width: 100%
+				text-align: center
+				font-weight: 600
+				margin-bottom: 20px
+			.feature-col
+				width: 20%
+				height: 200px
+				margin-bottom: 40px
+				+pos(rel,null)
+				overflow: hidden
+				text-align: center
+				cursor: pointer
+				+media-breakpoint-down(lg)
+					width: 25%
+				+media-breakpoint-down(md)
+					width: 33.33%
+				+media-breakpoint-down(sm)
+					width: 50%
+					height: auto
+					overflow: visible
+				+media-breakpoint-down(xs)
+					width: 100%
+					margin-bottom: 20px
+				figure 
+					.feature-icon
+						+flexbox
+						justify-content: center
+						align-items: center
+						height: 70px
+						margin-bottom: 15px
+					figcaption
+						.feature-name
+							font-weight: 700
+							color: $main
+						.feature-des
+							+fs(12rem)
+							padding: 10px 15px
+							+pos(abs, 140px 0 null 0)
+							z-index: 5
+							color: darken($white,40%)
+							border: 1px solid transparent
+							background: $white
+							+media-breakpoint-down(sm)
+								+pos(static,null)
+								max-width: 80%
+								margin: 10px auto
+							+media-breakpoint-down(xs)
+								border-color: darken($white,40%)
+				&:hover
+					overflow: visible
+					figure 
+						figcaption
+							.feature-des
+								border: 1px solid darken($white,40%)
+.product-contain
+	margin-bottom: 30px
+	.small-title
+		margin-bottom: 30px
+	.contain
+		figure
+			text-align: center
+			.contain-img
+			figcaption
+				padding-top: 10px
+				.number
+					+fs(24rem)
+					color: $orange
+					font-weight: 600
+					// margin-bottom: 10px
+				.name
+					+fs(18rem)
+
+.product-service
+	margin-bottom: 30px
+	.content
+		background: darken($white,3%)
+		padding: 15px
+		+fs(14rem)
+.product-other
+	margin-bottom: 50px
+	.product-list
+		border-top: 1px solid darken($white,10%)
+		border-left: 1px solid darken($white,10%)
+		.row
+			margin: 0px 0px
+		.col-6
+			padding: 0px 0px
+		.product-col
+			border-right: 1px solid darken($white,10%)
+			border-bottom: 1px solid darken($white,10%)
+	.other-slide
+		+pos(rel,null)
+		&:after
+			content: ''
+			+pos(abs, 0 0 0 null)
+			width: 1px
+			background: darken($white,10%)
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			+fs(0)
+			text-align: center
+			+bor-rad(50px)
+			z-index: 10
+			color: darken($white,60%)
+			// opacity: 0
+			&:hover
+				color: $blue
+			&.slick-disabled
+				opacity: 0
+			&:before
+				content: ''
+				font-family: 'fontawesome'
+				+fs(28rem)
+		&:hover
+			.slick-prev, .slick-next
+				opacity: 1
+		.slick-prev
+			left: -30px
+			&:before
+				content: '\f104'
+		.slick-next
+			right: -30px
+			&:before
+				content: '\f105'
+
+.pages
+	// border-top: 1px solid darken($white,10%)
+	margin: 30px 0 40px
+	// background: darken($white,3%)
+	// justify-content: center
+	.pagination
+		padding: 0
+		// justify-content: center
+		li 
+			display: inline-block
+			a, span 
+				display: block
+				width: 36px
+				height: 36px
+				line-height: 36px
+				+bor-rad(3px)
+				text-align: center
+				// font-weight: 500
+				color: darken($white,40%)
+			&:hover
+				a, span 
+					color: $main
+			&.active
+				a, span 
+					color: $white
+					background: $blue
+					font-weight: 700
+				// border: 1px solid darken($white,10%)
+.share
+	.label 
+		font-weight: 500
+		margin-right: 15px
+		display: inline-block
+		vertical-align: middle
+		margin-bottom: 0
+		+fs(13rem)
+	a 
+		+fs(18rem)
+		color: darken($white,60%)
+		display: inline-block
+		vertical-align: middle
+		.fa 
+			+transition(all,0.5s)
+		+ a 
+			margin-left: 15px
+		&:hover
+			color: $white
+		&.fa-facebook
+			&:hover
+				background: $facebook
+		&.fa-twitter
+			&:hover
+				background: $twitter
+		&.fa-pinterest-p
+			&:hover
+				background: $pint
+		&.fa-google-plus
+			&:hover
+				background: $google
+
+.view360
+	text-align: center
+	+flexbox
+	flex-wrap: wrap
+	justify-content: center
+	align-items: center
+	.productimg
+		width: 100%
+		img
+			height: 500px
+	.view360img
+		width: 100%
+		margin-top: -150px
+
+@keyframes hotline-animate
+	0%
+		+transform(scale3d(1.3,1.3,1.3))
+		opacity: 0.5
+	100%
+		+transform(scale3d(2.2,2.2,2.2))
+		opacity: 0
+@keyframes phone-ring
+	0%
+		transform: rotate(0deg) scale(1) skew(1deg)
+	5%
+		transform: rotate(-25deg) scale(1) skew(1deg)
+	10%
+		transform: rotate(25deg) scale(1) skew(1deg)
+	15%
+		transform: rotate(-25deg) scale(1) skew(1deg)
+	20%
+		transform: rotate(25deg) scale(1) skew(1deg)
+	25%
+		transform: rotate(0deg) scale(1) skew(1deg)
+	100%
+		transform: rotate(0deg) scale(1) skew(1deg)
+.phonecall
+	+pos(fix, null 20px 20px null)
+	// +transform(translate(-50%,0))
+	z-index: 50
+	&:before
+		content: '\f095'
+		font-family: 'fontawesome'
+		+fs(28rem)
+		display: block
+		font-weight: normal
+		width: 50px
+		height: 50px
+		line-height: 50px
+		text-align: center
+		// background: linear-gradient(135deg,$blue,$menu)
+		background: $orange
+		// opacity: 0.9
+		color: color-rgba($white,1)
+		+bor-rad(50px)
+		text-shadow: none
+		// box-shadow: 0px 10px 20px -10px color-rgba($black,0.3)
+		+pos(rel,null)
+		z-index: 1
+		animation-name: phone-ring
+		animation-duration: 2s
+		animation-iteration-count: infinite
+		+transition(all,0.5s)
+	&:after
+		content: ''
+		display: block
+		+pos(abs, 0 null 0 0)
+		right: 0
+		background: $orange
+		opacity: 0.5
+		+bor-rad(50px)
+		+transform(scale3d(1.2,1.2,1))
+		animation-name: hotline-animate
+		animation-duration: 1s
+		animation-iteration-count: infinite
+		+transition(all,0.5s)
+	&:hover
+		&:before, &:after
+			background: lighten($orange,10%)

@@ -1,0 +1,260 @@
+.sub-header
+	background: $white
+	border-bottom: 1px solid darken($white,10%)
+	+pos(fix, 0 0 null 0)
+	z-index: 1000
+	visibility: hidden
+	opacity: 0
+	+transition(all,0.5s)
+	&.active
+		visibility: visible
+		opacity: 1
+	.brand-logo
+		+flexbox
+		align-items: center
+		align-content: center
+		height: 50px
+		float: left
+		a
+			display: block
+		img
+			max-height: 40px
+			max-width: 120px
+	.site-nav
+		float: right
+		ul
+			+flexbox
+			li
+				a
+					display: block
+					line-height: 20px
+					+fs(14rem)
+					// font-weight: 500
+					color: darken($white,40%)
+					padding: 15px 15px
+					+pos(rel,null)
+					&:after
+						content: ''
+						+pos(abs, null 100% -1px 0)
+						height: 3px
+						background: $blue
+						+transition(all,0.5s)
+					&.mPS2id-highlight
+						color: $main
+						font-weight: 500
+						&:after
+							right: 0
+
+
+.brand-page
+	.brand-banner
+		+pos(rel,null)
+		margin: 0px -110px
+		.img
+			img
+				width: 100%
+		.caption
+			+pos(abs, 0 0 null 0)
+			padding: 60px 0 0
+			.brand-logo
+				margin-bottom: 30px
+				img
+					max-height: 40px
+
+			.brand-des
+				+fs(18rem)
+				color: $white
+				max-width: 80%
+				margin: 0 auto
+	.brand-category
+		margin-top: -250px
+		margin-bottom: 50px
+		.slick-list
+			margin: 0px -10px
+		.item
+			padding: 0px 10px
+		.category
+			background: darken($white,3%)
+			figure
+				padding: 20px
+				.category-img
+					+flexbox
+					height: 180px
+					justify-content: center
+					align-items: center
+					align-content: center
+					img
+						max-width: 100%
+						max-height: 100%
+				figcaption
+					padding: 15px 10px
+					text-align: center
+					.category-name
+						+fs(15rem)
+						font-weight: 600
+						text-transform: uppercase
+						margin-bottom: 15px
+						a
+							color: $main
+					.category-des
+						+fs(14rem)
+						font-weight: 300
+						margin-bottom: 15px
+						display: -webkit-box
+						height: 0.875rem*1.5*5
+						-webkit-line-clamp: 5
+						-webkit-box-orient: vertical
+						overflow: hidden
+						text-overflow: ellipsis
+					.link-wrap
+					.link
+						+fs(14rem)
+						display: inline-block
+						+bor-rad(50px)
+						color: $main
+						border: 1px solid darken($white,60%)
+						text-transform: uppercase
+						font-weight: 600
+						line-height: 34px
+						padding: 0px 35px
+						&:hover
+							background: $blue
+							border-color: $blue
+							color: $white
+	
+	.product-check
+		padding: 40px 0
+		// background: darken($white,2%)
+		.imei-check
+			max-width: 550px
+			margin: 0 auto
+			+flexbox
+			+bor-rad(50px)
+			overflow: hidden
+			background: $white
+			border: 1px solid color-rgba($black,0.1)
+			box-sizing: content-box
+			input
+				line-height: 46px
+				width: calc(100% - 140px)
+				border: none
+				+fs(14rem)
+				padding: 0px 30px
+			.btn-check
+				width: 140px
+				line-height: 46px
+				background: $orange
+				color: $white
+				text-align: center
+				font-weight: 500
+				text-transform: uppercase
+				+fs(14rem)
+				&:before
+					content: '\f00c'
+					margin-right: 5px
+	.primary-store
+		padding: 50px 0
+		.store-list
+			.store
+				margin-bottom: 20px
+				figure
+					.store-logo
+						border: 2px solid darken($white,10%)
+						+flexbox
+						height: 180px
+						justify-content: center
+						align-items: center
+						align-content: center
+						+pos(rel,null)
+						img
+							max-width: 80%
+							max-height: 80%
+						.store-star
+							+pos(abs, null null 10px 10px)
+							color: $amber
+					figcaption
+						padding: 10px 0
+						.store-name
+							+fs(15rem)
+							font-weight: 500
+				&.warning
+					figure
+						.store-logo
+							border-color: $amber
+							.store-star
+								.fa
+									&:nth-child(3),&:nth-child(4),&:nth-child(5)
+										display: none
+				&.danger
+					figure
+						.store-logo
+							border-color: $red
+							.store-star
+								.fa
+									&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5)
+										display: none
+				&.banned
+					figure
+						.store-logo
+							border-color: darken($white,60%)
+							+pos(rel,null)
+							&:before
+								content: ''
+								display: block
+								width: 150px
+								height: 5px
+								+bor-rad(50px)
+								background: darken($white,60%)
+								+pos(abs, 50% null null 50%)
+								+transform(translate(-50%,-50%)rotateZ(45deg))
+								z-index: 5
+							img
+								filter: grayscale(100%)
+							.store-star
+								.fa
+									display: none
+	.brand-project
+		padding: 50px 0
+		background: darken($white,2%)
+		.project-slide
+			.slick-prev, .slick-next
+				+pos(abs, 250px null null null)
+				+transform(translate(0,-50%))
+				+fs(0)
+				&:before
+					content: ''
+					+fs(28rem)
+			.slick-prev
+				left: -30px
+				&:before
+					content: '\f104'
+			.slick-next
+				right: -30px
+				&:before
+					content: '\f105'
+			.item
+				.img
+					margin-bottom: 20px
+					box-shadow: 0px 10px 20px -5px color-rgba($black,0.3)
+				.caption
+					text-align: center
+					.title
+						+fs(24rem)
+						font-weight: 700
+						text-transform: uppercase
+						color: $blue
+						margin-bottom: 10px
+					.des
+						+fs(14rem)
+						color: $main
+	.brand-cert
+		padding: 50px 0
+		.cert-img
+			text-align: center
+			margin-bottom: 40px
+			img
+				max-height: 400px
+		.cert-des
+			max-width: 80%
+			margin: 0 auto
+			text-align: center

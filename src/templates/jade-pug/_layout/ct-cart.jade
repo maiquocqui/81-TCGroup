@@ -1,0 +1,252 @@
+section.breadcrumb-wrap
+	.container
+		ol.breadcrumb(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books')
+					span(itemprop='name') Trang chủ
+				meta(itemprop='position', content='1')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Giỏ hàng
+				meta(itemprop='position', content='2')
+	.breadcrumb-img
+		img(src="img/breadcrumb/1.jpg", alt="")
+		h3.pagename
+.container
+	.row.flex.flex-wrap
+		.col-12
+			section.cartstep.clearfix
+				.step.active.finish
+					.number 1
+					.name Đăng nhập
+				.step.active
+					.number 2
+					.name Giỏ hàng
+				.step
+					.number 3
+					.name Thông tin
+				.step
+					.number 4
+					.name Thanh toán
+		.col-12
+			section.cart-page.clearfix
+				h1.carttitle Giỏ hàng của bạn (<strong>2</strong> sản phẩm)
+				//- .cartnotice Giỏ hàng có chứa sản phẩm được tham gia chương trình khuyến mãi. 
+					a(target="_blank" href="#") Xem chi tiết
+					.removenotice
+				table.cart-table
+					thead
+						tr 
+							th.product Sản phẩm
+							th.price Đơn giá
+							th.amount Số lượng
+							th.total Thành tiền
+					tbody
+						tr 
+							td.product 
+								figure
+									a.product-img(href="#")
+										img(src="img/product/1.png", alt="")
+									figcaption
+										h3.product-name
+											a(href="#") khóa cửa điện tử
+										//- .product-des
+											p Dây thép không gỉ
+											p Mặt tròn
+										//- .product-option
+											.product-size 
+												.label Size: 
+												select(name="")
+													option(value="") Lớn
+											.product-color
+												.label Màu sắc
+												.color-list
+													a.ajaxlink(href='#', data-toggle="tooltip" data-placement="right" title="Trắng")
+														.color-img(style="background: #fff")
+													a.ajaxlink(href='#', data-toggle="tooltip" data-placement="right" title="Đen")
+														.color-img(style="background: #000")
+													a.ajaxlink.active(href='#', data-toggle="tooltip" data-placement="right" title="Đỏ")
+														.color-img(style="background: #ED0000")
+										a.removeproduct(href="#") <i class="fa fa-times-circle" aria-hidden="true"></i> Xóa sản phẩm
+							td.price
+								.new 5.400.000đ
+								.old 6.000.000đ
+								.sale -10%
+							td.amount
+								.input-number
+									.btn-spin.btn-dec -
+									input(type="text", value="1")
+									.btn-spin.btn-inc +
+							td.total 5.400.000đ
+						tr 
+							td.product 
+								figure
+									a.product-img(href="#")
+										img(src="img/product/2.png", alt="")
+									figcaption
+										h3.product-name
+											a(href="#") khóa cửa điện tử
+										//- .product-des
+											p Dây thép không gỉ
+											p Mặt tròn
+										//- .product-option
+											.product-size 
+												.label Size: 
+												select(name="")
+													option(value="") Lớn
+											.product-color
+												.label Màu sắc
+												.color-list
+													a.ajaxlink(href='#', data-toggle="tooltip" data-placement="right" title="Trắng")
+														.color-img(style="background: #fff")
+													a.ajaxlink(href='#', data-toggle="tooltip" data-placement="right" title="Đen")
+														.color-img(style="background: #000")
+													a.ajaxlink.active(href='#', data-toggle="tooltip" data-placement="right" title="Đỏ")
+														.color-img(style="background: #ED0000")
+										a.removeproduct(href="#") <i class="fa fa-times-circle" aria-hidden="true"></i> Xóa sản phẩm
+							td.price
+								.new 5.400.000đ
+								.old 6.000.000đ
+								.sale -10%
+							td.amount
+								.input-number
+									.btn-spin.btn-dec -
+									input(type="text", value="1")
+									.btn-spin.btn-inc +
+							td.total 5.400.000đ
+						tr 
+							td.product 
+								figure
+									a.product-img(href="#")
+										img(src="img/product/3.png", alt="")
+									figcaption
+										h3.product-name
+											a(href="#") khóa cửa điện tử
+										//- .product-des
+											p Dây cao su
+											p Mặt vuông
+										//- .product-option
+											.product-size 
+												.label Size: 
+												select(name="")
+													option(value="") Lớn
+											.product-color
+												.label Màu sắc
+												.color-list
+													a.ajaxlink(href='#', data-toggle="tooltip" data-placement="right" title="Trắng")
+														.color-img(style="background: #fff")
+													a.ajaxlink(href='#', data-toggle="tooltip" data-placement="right" title="Đen")
+														.color-img(style="background: #000")
+													a.ajaxlink.active(href='#', data-toggle="tooltip" data-placement="right" title="Đỏ")
+														.color-img(style="background: #ED0000")
+										a.removeproduct(href="#") <i class="fa fa-times-circle" aria-hidden="true"></i> Xóa sản phẩm
+							td.price
+								.new 5.400.000đ
+								.old 6.000.000đ
+								.sale -10%
+							td.amount
+								.input-number
+									.btn-spin.btn-dec -
+									input(type="text", value="1")
+									.btn-spin.btn-inc +
+							td.total 5.400.000đ
+				.totalamount Tạm tính: 
+					span 1.000.000đ
+					br
+					|Giá giảm cho đại lý: 
+					span -10%
+					br
+					|Tổng cộng: 
+					strong 900.000đ
+				.payment-des Giá đã bao gồm VAT
+				.btn-wrap.clearfix
+					a.btn-back.hidden-sm-down(href="index.html") Tiếp tục mua hàng
+					a.hvr-sweep-to-right.btn-continue(href="cart1.html") Tiến hành thanh toán
+		.col-12
+			section.product-lastview.clearfix
+				h2.carttitle Sản phẩm đã xem
+				.cart-lastview-slide.product-list
+					.item
+						.product-col
+							figure
+								a.product-img(href="#!")
+									img(src="img/product/1.png", alt="")
+								figcaption
+									h3.product-name
+										a(href="#!") Khóa cửa điện tử Samsung SHS-3321XMK
+									.product-price
+										.new 2.000.000 đ
+										.old 2.812.500 đ
+									.btn-wrap
+										a.btn-buy(href="#!") <span class="lnr lnr-cart"></span>
+										a.btn-viewdetail(href="#!") Xem thêm
+					.item
+						.product-col
+							figure
+								a.product-img(href="#!")
+									img(src="img/product/1.png", alt="")
+								figcaption
+									h3.product-name
+										a(href="#!") Khóa cửa điện tử Samsung SHS-3321XMK
+									.product-price
+										.new 2.000.000 đ
+										.old 2.812.500 đ
+									.btn-wrap
+										a.btn-buy(href="#!") <span class="lnr lnr-cart"></span>
+										a.btn-viewdetail(href="#!") Xem thêm
+					.item
+						.product-col
+							figure
+								a.product-img(href="#!")
+									img(src="img/product/1.png", alt="")
+								figcaption
+									h3.product-name
+										a(href="#!") Khóa cửa điện tử Samsung SHS-3321XMK
+									.product-price
+										.new 2.000.000 đ
+										.old 2.812.500 đ
+									.btn-wrap
+										a.btn-buy(href="#!") <span class="lnr lnr-cart"></span>
+										a.btn-viewdetail(href="#!") Xem thêm
+					.item
+						.product-col
+							figure
+								a.product-img(href="#!")
+									img(src="img/product/1.png", alt="")
+								figcaption
+									h3.product-name
+										a(href="#!") Khóa cửa điện tử Samsung SHS-3321XMK
+									.product-price
+										.new 2.000.000 đ
+										.old 2.812.500 đ
+									.btn-wrap
+										a.btn-buy(href="#!") <span class="lnr lnr-cart"></span>
+										a.btn-viewdetail(href="#!") Xem thêm
+					.item
+						.product-col
+							figure
+								a.product-img(href="#!")
+									img(src="img/product/1.png", alt="")
+								figcaption
+									h3.product-name
+										a(href="#!") Khóa cửa điện tử Samsung SHS-3321XMK
+									.product-price
+										.new 2.000.000 đ
+										.old 2.812.500 đ
+									.btn-wrap
+										a.btn-buy(href="#!") <span class="lnr lnr-cart"></span>
+										a.btn-viewdetail(href="#!") Xem thêm
+					.item
+						.product-col
+							figure
+								a.product-img(href="#!")
+									img(src="img/product/1.png", alt="")
+								figcaption
+									h3.product-name
+										a(href="#!") Khóa cửa điện tử Samsung SHS-3321XMK
+									.product-price
+										.new 2.000.000 đ
+										.old 2.812.500 đ
+									.btn-wrap
+										a.btn-buy(href="#!") <span class="lnr lnr-cart"></span>
+										a.btn-viewdetail(href="#!") Xem thêm

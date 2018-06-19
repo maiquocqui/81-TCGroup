@@ -1,0 +1,22 @@
+
+.sidebar-category
+	margin: 50px 0px
+	ul 
+		background: darken($white,3%)
+		li
+			border-bottom: 1px solid $white
+			&:last-child
+				border-bottom: none
+			a
+				display: block
+				padding: 9px 20px
+				color: $main
+				+fs(14rem)
+				&:hover
+					background: color-rgba($black,0.05)
+					color: $blue
+			&.active
+				a
+					color: $blue
+					font-weight: 600
+					background: color-rgba($black,0.05)

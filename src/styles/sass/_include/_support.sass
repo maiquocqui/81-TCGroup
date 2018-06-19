@@ -1,0 +1,62 @@
+.support-page
+	padding: 50px 0
+	+pos(rel,null)
+.faqlist
+	.faq
+		// +bor-rad(5px)
+		border: 1px solid darken($white,10%)
+		margin-bottom: 15px
+		// +bor-rad(5px)
+		overflow: hidden
+		&.active
+			.faqtitle
+				font-weight: 500
+		.faqtitle
+			// font-weight: 500
+			color: $main
+			padding: 15px 15px 15px 40px
+			+pos(rel,null)
+			cursor: pointer
+			&:hover
+				color: $gray
+			&:before 
+				content: '\f059'
+				font-family: 'fontawesome'
+				margin-right: 10px
+				color: $red
+				+pos(abs, 15px null null 15px)
+			&:after
+				content: '\f107'
+				font-family: 'fontawesome'
+				+pos(abs, 12px 15px null null)
+				+fs(18rem)
+		.faqcontent
+			display: none
+			border-top: 1px solid darken($white,10%)
+			padding: 15px 15px 15px 40px
+
+.send-mess
+	padding: 20px
+	background: darken($white,3%)
+	.module-title
+		+fs(14rem)
+		font-weight: 600
+		text-transform: uppercase
+		margin-bottom: 10px
+	.form-group
+		margin-bottom: 10px
+	input, textarea
+		width: 100%
+		border: 1px solid darken($white,10%)
+		padding: 9px 15px
+		+fs(14rem)
+	input[type="submit"]
+		display: inline-block
+		width: auto
+		background: $blue
+		color: $white
+		text-transform: uppercase
+		font-weight: 500
+		padding: 9px 30px
+		&:hover
+			background: lighten($blue,10%)

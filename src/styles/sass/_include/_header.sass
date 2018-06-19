@@ -1,0 +1,228 @@
+header
+	background: $white
+	border-bottom: 1px solid color-rgba($black,0.1)
+	.header-top
+		background: darken($white,3%)
+		border-bottom: 1px solid darken($white,10%)
+	.col-right
+		float: right
+		+flexbox
+		flex-wrap: wrap
+	.hotline
+		line-height: 30px
+		padding: 0px 15px
+		border-right: 1px solid darken($white,10%)
+		a
+			color: darken($white,60%)
+			font-weight: 600
+			&:before
+				content: '\f095'
+				margin-right: 5px
+				color: $orange
+				+fs(16rem)
+				vertical-align: middle
+			&:hover
+				color: $blue
+	.email
+		line-height: 30px
+		padding: 0px 15px
+		border-right: 1px solid darken($white,10%)
+		a
+			+fs(11rem)
+			color: darken($white,60%)
+			font-weight: 500
+			&:before
+				content: '\f095'
+				margin-right: 5px
+				color: $orange
+				+fs(16rem)
+				vertical-align: middle
+			&:hover
+				color: $blue
+	.language
+		+flexbox
+		line-height: 30px
+		padding: 0px 15px
+		border-right: 1px solid darken($white,10%)
+		a
+			display: block
+			+ a
+				margin-left: 10px
+			img
+				height: 12px
+	.header-main
+		.col-right
+			+flexbox
+			height: 88px
+			align-items: center
+			align-content: center
+	.sitelogo
+		height: 88px
+		+flexbox
+		align-items: center
+		align-content: center
+		float: left
+		a
+			display: block
+		img
+	.search
+		height: 88px
+		margin-left: 30px
+		+flexbox
+		align-items: center
+		align-content: center
+		float: left
+		.searchwrap
+			.searchbox
+				+flexbox
+				align-items: center
+				align-content: center
+				width: 450px
+				+bor-rad(50px)
+				overflow: hidden
+				border: 1px solid darken($white,10%)
+				input, select
+					border: none
+					background: none
+					line-height: 34px
+					padding: 0px 15px
+					+fs(13rem)
+					color: darken($white,60%)
+				input
+					width: calc(100% - 100px - 34px)
+				select
+					width: 100px
+					padding: 2px 15px
+					text-transform: uppercase
+					border-left: 1px solid darken($white,10%)
+				.searchbutton
+					width: 34px
+					height: 34px
+					line-height: 34px
+					+bor-rad(50px)
+					background: $orange
+					color: $white
+					+fs(24rem)
+	.cart
+		padding: 0 25px
+		.cart-toggle
+			+fs(13rem)
+			font-weight: 500
+			color: darken($white,60%)
+			+pos(rel,null)
+			+flexbox
+			align-items: center
+			align-content: center
+			&:hover
+				color: $blue
+			.lnr
+				+fs(28rem)
+				margin-left: 10px
+			.cart-amount
+				+fs(11rem)
+				line-height: 1
+				color: $white
+				padding: 2px 5px
+				+bor-rad(50px)
+				background: $orange
+				+pos(abs, -2px 4px null null)
+	.login
+		border-left: 1px solid darken($white,10%)
+		padding: 0px 25px
+		ul
+			+flexbox
+			+fs(13rem)
+			&:before
+				content: '\f007'
+				margin-right: 5px
+				+fs(18rem)
+				margin-top: -3px
+			li
+				&:first-child
+					display: none
+				+ li
+					// &:before
+					// 	content: '/'
+					// 	margin: 0px 5px
+				a
+					color: darken($white,60%)
+					font-weight: 500
+					&:hover
+						color: $blue
+	.header-menu
+		border-top: 1px solid darken($white,10%)
+	.menu
+		+flexbox
+		.menu-left
+			width: 280px
+			+pos(rel,null)
+			.btn-showmenu
+				color: $white
+				+fs(14rem)
+				text-transform: uppercase
+				background: $orange
+				padding: 0px 20px
+				line-height: 40px
+				.fa
+					+fs(16rem)
+					margin-right: 5px
+			.menu-content
+				+pos(abs, 100% 0 null 0)
+				background: $white
+				visibility: hidden
+				opacity: 0
+				z-index: 100
+				ul.menu-link
+					> li
+						border-bottom: 1px solid darken($white,10%)
+						&:last-child
+							border-bottom: none
+						> a
+							+flexbox
+							align-items: center
+							align-content: center
+							height: 40px
+							padding: 0px 15px
+							+pos(rel,null)
+							color: $main
+							&:before
+								content: '\f105'
+								+pos(abs, 8px 10px null null)
+								opacity: 0.3
+							.icon
+								+flexbox
+								width: 24px
+								height: 24px
+								justify-content: center
+								align-items: center
+								margin-right: 5px
+							.text
+								+fs(13rem)
+								font-weight: 500
+							&:hover
+								background: darken($white,3%)
+								color: $orange
+			&:hover
+				+transition(all,0.5s)
+				.menu-content
+					box-shadow: 0px 10px 30px -5px color-rgba($black,0.3)
+					+transition(all,0.5s)
+					visibility: visible
+					opacity: 1
+		.menu-right
+			width: calc(100% - 280px)
+			.menu-content
+				ul.menu-link
+					+flexbox
+					> li
+						> a
+							display: block
+							+fs(13rem)
+							text-transform: uppercase
+							font-weight: 500
+							line-height: 40px
+							padding: 0px 20px
+							color: darken($white,60%)
+						&:hover
+							> a
+								color: $blue

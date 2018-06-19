@@ -1,0 +1,143 @@
+.store-page
+	padding: 50px 0
+	+pos(rel,null)
+.system-map
+	+pos(rel,null)
+	height: 600px
+	// margin-bottom: 60px
+	overflow: hidden
+	.findmap-wrap
+		+pos(rel,null)
+		z-index: 10
+		background: darken($white,3%)
+		+media-breakpoint-down(lg)
+			margin-top: 40px
+		+media-breakpoint-down(xs)
+			+transform(translateY(calc(100% - 30px)))
+			+transition(all,0.5s)
+			&:before
+				content: '\f102'
+				background: darken($white,3%)
+				color: $gray
+				width: 60px
+				height: 30px
+				line-height: 30px
+				+fs(18rem)
+				text-align: center
+				+transform(translateX(-50%))
+				+pos(abs, -30px null null 50%)
+			&:hover
+				+transform(translateY(0))
+		.findmap
+			padding: 15px 20px
+			.system-title
+				+fs(24rem)
+				color: $blue
+				text-transform: uppercase
+				margin-bottom: 10px
+				// font-weight: 300
+				+media-breakpoint-down(lg)
+					+fs(18rem)
+			.filtermap
+				.label
+					+fs(14rem)
+					color: darken($white,60%)
+					margin-bottom: 10px
+				.field
+					margin-bottom: 10px
+					&:last-child
+						margin-bottom: 0
+					select
+						width: 100%
+						+bor-rad(5px)
+						background: $white
+						border: 1px solid darken($white,10%)
+						+fs(14rem)
+						padding: 8px 15px
+						color: darken($white,60%)
+		.addresslist
+			background: $white
+			border-top: 1px solid darken($white,10%)
+			overflow: auto
+			max-height: calc(600px - 194px)
+			+media-breakpoint-down(lg)
+				max-height: calc(600px - 179px)
+			&::-webkit-scrollbar-track
+				// -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+				background-color: darken($white,10%)
+			&::-webkit-scrollbar
+				width: 8px
+				background-color: darken($white,10%)
+			&::-webkit-scrollbar-thumb
+				background-color: darken($white,40%)
+				border: none
+			.address
+				padding: 10px 15px
+				background: $white
+				border-bottom: 1px solid darken($white,10%)
+				color: darken($white,60%)
+				line-height: 1.7
+				cursor: pointer
+				+transition(all,0.5s)
+				&:hover
+					background: lighten($gray,65%)
+				&.active 
+					background: $gray
+					color: $white
+					a  
+						color: $white
+						font-weight: 500
+						&:hover
+							// color: lighten($red,20%)
+							text-decoration: underline
+				.title
+					+fs(13rem)
+					font-weight: 500
+					line-height: 1.3
+					&:before
+						content: '\f041'
+						margin-right: 5px
+						color: lighten($red,20%)
+				ul 
+					li
+						+fs(13rem)
+				a  
+					color: darken($white,60%)
+					&:hover
+						color: $red
+	#map
+		height: 100%
+		iframe 
+			width: 100%
+			height: 100%
+
+.system-news
+	.news-list
+		.news-col
+			figure
+				figcaption
+					.news-name
+						a
+							+fs(14rem)
+							&:before
+								content: '\f041'
+								margin-right: 5px
+								color: lighten($red,20%)
+					.news-des
+						+fs(14rem)
+	.btn-wrap
+		text-align: center
+	.btn-viewmore
+		display: inline-block
+		+fs(13rem)
+		border: 1px solid darken($white,10%)
+		padding: 8px 30px
+		color: $main
+		text-transform: uppercase
+		&:after
+			content: '\f107'
+			margin-left: 5px
+		&:hover
+			background: $black
+			color: $white
+			border-color: $black

@@ -1,0 +1,185 @@
+section.breadcrumb-wrap
+	.container
+		ol.breadcrumb(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books')
+					span(itemprop='name') Trang chủ
+				meta(itemprop='position', content='1')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Sản phẩm
+				meta(itemprop='position', content='2')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Samsung
+				meta(itemprop='position', content='3')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Khóa cửa điện tử
+				meta(itemprop='position', content='4')
+	.breadcrumb-img
+		img(src="img/breadcrumb/1.jpg", alt="")
+		h3.pagename
+.container
+	.row
+		include filter
+		.col-12.col-lg-9
+			section.product-page.clearfix
+				.btn-togglewrap.d-lg-none
+					.btn-showcate Danh mục sản phẩm
+					.btn-showfilter Lọc sản phẩm
+				.category-info
+					h1.cate-name Khóa cửa điện tử
+					.col-right
+						.change-view
+							label Xem theo
+							.btn-changeview
+								a.btn-viewitem.active(href="#!") <i class="fa fa-th" aria-hidden="true"></i>
+								a.btn-viewlist(href="#!") <i class="fa fa-th-list" aria-hidden="true"></i>
+						.product-sort.clearfix
+							label Xếp theo
+							select
+								option(value="#") Mới nhất
+				.product-list.clearfix
+					.row
+						article.col-6.col-md-4
+							.product-col
+								figure
+									.promotion.sale -30%
+									a.product-img(href="#!")
+										img(src="img/product/1.png", alt="")
+									figcaption
+										h3.product-name
+											a(href="#!") Khóa cửa điện tử Samsung SHS-3321XMK
+										.product-price
+											.new 2.000.000 đ
+											.old 2.812.500 đ
+										.btn-wrap
+											a.btn-buy(href="#!") <span class="lnr lnr-cart"></span>
+											a.btn-viewdetail(href="#!") Xem thêm
+						article.col-6.col-md-4
+							.product-col
+								figure
+									.promotion.new New
+									a.product-img(href="#!")
+										img(src="img/product/1.png", alt="")
+									figcaption
+										h3.product-name
+											a(href="#!") Khóa cửa điện tử Samsung SHS-3321XMK
+										.product-price
+											.new 2.000.000 đ
+											.old 2.812.500 đ
+										.btn-wrap
+											a.btn-buy(href="#!") <span class="lnr lnr-cart"></span>
+											a.btn-viewdetail(href="#!") Xem thêm
+						article.col-6.col-md-4
+							.product-col
+								figure
+									.promotion.hot Hot
+									a.product-img(href="#!")
+										img(src="img/product/1.png", alt="")
+									figcaption
+										h3.product-name
+											a(href="#!") Khóa cửa điện tử Samsung SHS-3321XMK
+										.product-price
+											.new 2.000.000 đ
+											.old 2.812.500 đ
+										.btn-wrap
+											a.btn-buy(href="#!") <span class="lnr lnr-cart"></span>
+											a.btn-viewdetail(href="#!") Xem thêm
+						article.col-6.col-md-4
+							.product-col
+								figure
+									a.product-img(href="#!")
+										img(src="img/product/1.png", alt="")
+									figcaption
+										h3.product-name
+											a(href="#!") Khóa cửa điện tử Samsung SHS-3321XMK
+										.product-price
+											.new 2.000.000 đ
+											.old 2.812.500 đ
+										.btn-wrap
+											a.btn-buy(href="#!") <span class="lnr lnr-cart"></span>
+											a.btn-viewdetail(href="#!") Xem thêm
+						article.col-6.col-md-4
+							.product-col
+								figure
+									a.product-img(href="#!")
+										img(src="img/product/1.png", alt="")
+									figcaption
+										h3.product-name
+											a(href="#!") Khóa cửa điện tử Samsung SHS-3321XMK
+										.product-price
+											.new 2.000.000 đ
+											.old 2.812.500 đ
+										.btn-wrap
+											a.btn-buy(href="#!") <span class="lnr lnr-cart"></span>
+											a.btn-viewdetail(href="#!") Xem thêm
+						article.col-6.col-md-4
+							.product-col
+								figure
+									.promotion.sale -50%
+									a.product-img(href="#!")
+										img(src="img/product/1.png", alt="")
+									figcaption
+										h3.product-name
+											a(href="#!") Khóa cửa điện tử Samsung SHS-3321XMK
+										.product-price
+											.new 2.000.000 đ
+											.old 2.812.500 đ
+										.btn-wrap
+											a.btn-buy(href="#!") <span class="lnr lnr-cart"></span>
+											a.btn-viewdetail(href="#!") Xem thêm
+						article.col-6.col-md-4
+							.product-col
+								figure
+									a.product-img(href="#!")
+										img(src="img/product/1.png", alt="")
+									figcaption
+										h3.product-name
+											a(href="#!") Khóa cửa điện tử Samsung SHS-3321XMK
+										.product-price
+											.new 2.000.000 đ
+											.old 2.812.500 đ
+										.btn-wrap
+											a.btn-buy(href="#!") <span class="lnr lnr-cart"></span>
+											a.btn-viewdetail(href="#!") Xem thêm
+						article.col-6.col-md-4
+							.product-col
+								figure
+									.promotion.sale -20%
+									a.product-img(href="#!")
+										img(src="img/product/1.png", alt="")
+									figcaption
+										h3.product-name
+											a(href="#!") Khóa cửa điện tử Samsung SHS-3321XMK
+										.product-price
+											.new 2.000.000 đ
+											.old 2.812.500 đ
+										.btn-wrap
+											a.btn-buy(href="#!") <span class="lnr lnr-cart"></span>
+											a.btn-viewdetail(href="#!") Xem thêm
+						article.col-6.col-md-4
+							.product-col
+								figure
+									a.product-img(href="#!")
+										img(src="img/product/1.png", alt="")
+									figcaption
+										h3.product-name
+											a(href="#!") Khóa cửa điện tử Samsung SHS-3321XMK
+										.product-price
+											.new 2.000.000 đ
+											.old 2.812.500 đ
+										.btn-wrap
+											a.btn-buy(href="#!") <span class="lnr lnr-cart"></span>
+											a.btn-viewdetail(href="#!") Xem thêm
+			.pages
+				ul.pagination
+					li.active
+						a(href="#") 1
+					li 
+						a(href="#") 2
+					li 
+						a(href="#") 3
+					li 
+						a(href="#") 4

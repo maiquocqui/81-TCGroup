@@ -1,0 +1,65 @@
+.advance-search
+	background: $white
+	padding: 30px
+	display: none
+	max-width: 950px
+	box-shadow: 0px 10px 20px -10px color-rgba($black,0.1)
+	+media-breakpoint-down(md)
+		max-width: 90%
+	+media-breakpoint-down(sm)
+		max-width: 95%
+		padding: 15px
+	.module-title
+		+fs(18rem)
+		text-transform: uppercase
+		font-weight: 500
+		color: $main
+		text-align: center
+		margin-bottom: 25px
+		+media-breakpoint-down(sm)
+			margin-bottom: 10px
+	.row
+		+media-breakpoint-down(sm)
+			margin: 0px -5px
+	.form-group
+		margin-bottom: 10px
+		+media-breakpoint-down(sm)
+			padding: 0px 5px
+	input, select
+		+bor-rad(5px)
+		border: 1px solid darken($white,10%)
+		padding: 10px 20px
+		+fs(14rem)
+		color: darken($white,60%)
+		width: 100%
+		+media-breakpoint-down(sm)
+			+fs(13rem)
+			padding: 8px 10px
+	select
+		padding: 9px 20px
+		+media-breakpoint-down(sm)
+			padding: 7px 10px
+	.btn-search
+		width: 100%
+		appearance: none
+		-moz-appearance: none
+		-webkit-appearance: none
+		+bor-rad(5px)
+		+fs(14rem)
+		text-transform: uppercase
+		line-height: 20px
+		padding: 9px 0
+		border: none
+		margin: 0
+		background: $red
+		color: $white
+		display: block
+		text-align: center
+		+media-breakpoint-down(sm)
+			+fs(13rem)
+			padding: 8px 0
+		&:after
+			content: '\f002'
+			margin-left: 10px
+		&:hover
+			background: darken($red,10%)

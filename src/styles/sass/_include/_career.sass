@@ -1,0 +1,128 @@
+.career-page
+	margin-bottom: 30px
+	.menu-job
+		margin: 0px 0 10px
+		padding: 0
+		border: none
+		z-index: 5
+		+media-breakpoint-down(sm)
+			// white-space: nowrap
+			// overflow: auto
+		a
+			display: inline-block
+			+fs(13rem)
+			text-transform: uppercase
+			+bor-rad(50px)
+			border: 1px solid darken($white,40%)
+			line-height: 36px
+			margin: 0
+			margin-bottom: 10px
+			padding: 0 15px
+			color: $lblack
+			+media-breakpoint-down(sm)
+				+fs(12rem)
+				line-height: 32px
+				padding: 0px 10px
+				width: 100%
+				text-align: center
+			+media-breakpoint-down(xs)
+				+fs(11rem)
+				line-height: 30px
+				padding: 0 5px
+			+ a 
+				margin-left: 5px
+				+media-breakpoint-down(sm)
+					margin-left: 0
+			&.active, &:hover
+				border-color: lighten($blue,10%)
+				font-weight: 700
+				color: lighten($blue,10%)
+	.job-wrap
+		.table 
+			border: 1px solid darken($white,10%)
+			margin: 0
+			padding: 0
+			// min-width: 800px
+			th 
+				line-height: 40px
+				font-weight: 600
+				color: $black
+				text-transform: uppercase
+				padding: 0px 15px
+				+fs(14rem)
+				border: none
+				border-top: none
+				border-bottom: 2px solid $red
+				+media-breakpoint-down(md)
+					+fs(13rem)
+			tr 
+				&:nth-child(even)
+					td 
+						background: darken($white,3%)
+			td 
+				// border-bottom: 1px solid darken($white,20%)
+				padding: 10px 15px
+				line-height: 1.5
+				vertical-align: middle
+				+fs(14rem)
+				background: $white
+				// &:first-child
+				// 	+fs(18rem)
+				// 	+media-breakpoint-down(sm)
+				// 		+fs(15rem)
+				&:last-child
+					text-align: right
+				a 
+					color: $main
+					&:hover
+						color: $red
+					.fa 
+						margin-right: 10px
+						color: $red
+				.new
+					display: inline-block
+					background: $red
+					color: $white
+					text-align: center
+					padding: 3px 15px
+					+bor-rad(3px)
+					font-weight: 600
+					+fs(12rem)
+					text-transform: uppercase
+				.hot
+					display: inline-block
+					background: $amber
+					color: $white
+					text-align: center
+					padding: 3px 15px
+					+bor-rad(3px)
+					font-weight: 600
+					+fs(12rem)
+					text-transform: uppercase
+			th, td
+				+media-breakpoint-down(md)
+					+fs(13rem)
+					width: calc(100% - 150px)
+					&:nth-child(2), &:nth-child(4)
+						display: none
+					&:nth-child(3)
+						width: 150px
+	.btn-apply, .frame-link
+		+mainbutton
+		margin-right: 10px
+	.download-link
+		+mainbutton
+		background: $grey
+		&:hover
+			background: lighten($grey,5%)
+
+.job-detail
+	time
+		display: inline-block
+		background: darken($white,10%)
+		padding: 3px 10px
+		// margin-bottom: 30px
+		+transform(translateY(-10px))
+		+fs(13rem)
+		font-weight: 600
+

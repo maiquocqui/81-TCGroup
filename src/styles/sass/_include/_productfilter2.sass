@@ -1,0 +1,350 @@
+
+.main-filter-wrap
+	+media-breakpoint-up(lg)
+		+flexbox
+		flex-wrap: wrap
+.filter-wrap2
+	+media-breakpoint-down(md)
+		+pos(fix, 80px null 41px 0)
+		z-index: 70
+		right: 0
+		background: $white
+		overflow: auto
+		padding: 30px 200px
+		+transform(translateY(-130%))
+		+transition(all,0.5s)
+		// opacity: 0
+		visibility: hidden
+		&.open
+			+transform(translateY(0%))
+			// opacity: 1
+			visibility: visible
+	+media-breakpoint-down(sm)
+		padding: 30px 100px
+	+media-breakpoint-down(xs)
+		padding: 15px
+	+media-breakpoint-up(lg)
+		+flexbox
+		flex-wrap: wrap
+		padding: 10px 0
+		background: $white
+		// margin: 0px -15px
+	.filter-group
+		margin-bottom: 20px
+		+media-breakpoint-up(lg)
+			margin-bottom: 0px
+			margin-right: 10px
+			// padding-right: 20px
+			// padding: 0px 15px
+			+pos(rel,null)
+			&:hover
+				.filter-title
+					color: $white
+					cursor: pointer
+					background: $main
+				.filter-option
+					display: block
+		&:before, &:after
+			content: ''
+			display: table
+			width: 100%
+			clear: both
+		.btn-reset
+			display: none
+			+pos(abs, 2px 0px null null)
+			// width: 24px
+			height: 16px
+			line-height: 16px
+			+fs(16rem)
+			text-align: center
+			cursor: pointer
+			+transition(all,0.3s)
+			color: darken($white,40%)
+			&:hover
+				color: $red
+	.filter-title
+		padding: 8px 20px
+		+bor-rad(0px)
+		// border: 1px solid darken($white,10%)
+		background: darken($white,10%)
+		color: darken($white,60%)
+		+fs(14rem)
+		margin-bottom: 15px
+		+transition(all,0.3s)
+		+media-breakpoint-up(lg)
+			margin-bottom: 5px
+		.fa 
+			margin-right: 10px
+		&:after
+			// content: '\f107'
+			// margin-left: 5px
+		span 
+			display: inline-block
+			font-weight: 400
+	.filter-option
+		// +bor-rad(5px)
+		padding: 0px 15px
+		animation-name: fadeIn
+		animation-duration: 0.5s
+		+media-breakpoint-up(lg)
+			+pos(abs, 100% null null 0px)
+			background: color-rgba($black,0.9)
+			border: none
+			box-shadow: 0 3px 10px color-rgba($black,0.1)
+			display: none
+			min-width: 250px
+			padding: 10px 15px
+			z-index: 100
+	.filter-category
+		> ul 
+			> li 
+				+pos(rel,null)
+				> a 
+					display: block
+					color: darken($white,40%)
+					// font-weight: 600
+					+fs(14rem)
+					+pos(rel,null)
+					padding: 5px 0
+					padding-left: 25px
+					&:before 
+						content: ''
+						display: block
+						width: 14px
+						height: 14px
+						border: 1px solid color-rgba($white,0.5)
+						+pos(abs, 7px null null 0)
+					&:after
+						content: '\f00c'
+						color: $red
+						display: block
+						width: 14px
+						height: 14px
+						+fs(16rem)
+						font-weight: normal
+						text-align: center
+						line-height: 12px
+						+pos(abs, 8px null null 0)
+						opacity: 0
+				&:hover
+					> a 
+						color: $white
+				&.active
+					> a 
+						color: $white
+						font-weight: 500
+						&:after
+							opacity: 1
+							font-weight: normal
+					.sub
+						display: block
+				.btn-showsubfilter
+					+pos(abs, 0px 0 null null)
+					// width: 30px
+					color: color-rgba($white,0.6)
+					height: 30px
+					line-height: 30px
+					text-align: center
+					cursor: pointer
+				.sub
+					padding: 0px 25px
+					// background: darken($white,3%)
+					+bor-rad(5px)
+					display: none
+					ul
+						li 
+							padding: 5px 0
+							a
+								display: block
+								+fs(13rem)
+								+pos(rel,null)
+								color: darken($white,40%)
+								padding-left: 25px
+								&:before 
+									content: ''
+									display: block
+									width: 14px
+									height: 14px
+									border: 1px solid color-rgba($white,0.5)
+									+pos(abs, 3px null null 0)
+								&:after
+									content: '\f00c'
+									color: $red
+									display: block
+									width: 14px
+									height: 14px
+									+fs(16rem)
+									font-weight: normal
+									text-align: center
+									line-height: 12px
+									+pos(abs, 4px null null 0)
+									opacity: 0
+							&:hover
+								> a 
+									color: $white
+							&.active
+								> a 
+									color: $white
+									font-weight: 500
+									&:after
+										opacity: 1
+										font-weight: normal
+	.brand-category
+		> ul 
+			> li 
+				+pos(rel,null)
+				padding: 5px 0
+				> a 
+					display: block
+					color: darken($white,40%)
+					// font-weight: 600
+					+fs(14rem)
+					+pos(rel,null)
+					padding-left: 25px
+					&:before 
+						content: ''
+						display: block
+						width: 14px
+						height: 14px
+						border: 1px solid color-rgba($white,0.5)
+						+pos(abs, 3px null null 0)
+					&:after
+						content: '\f00c'
+						color: $red
+						display: block
+						width: 14px
+						height: 14px
+						+fs(16rem)
+						font-weight: normal
+						text-align: center
+						line-height: 12px
+						+pos(abs, 4px null null 0)
+						opacity: 0
+					&:hover
+						color: $white
+					&.active
+						font-weight: 500
+						color: $white
+						&:after
+							opacity: 1
+							font-weight: normal
+	.product-size
+		display: flex
+		flex-wrap: wrap
+		justify-content: flex-start
+		margin-bottom: -15px
+		.size, li
+			margin-right: 5px
+			margin-bottom: 15px
+			a 
+				display: block
+				color: darken($white,40%)
+				+fs(14rem)
+				padding: 2px 5px
+				&:hover
+					color: $white
+				&.active
+					color: $white
+					background: color-rgba($white,0.1)
+					font-weight: 500
+	.color-picker
+		display: flex
+		flex-wrap: wrap
+		justify-content: flex-start
+		// margin: 0 -10px
+		margin-bottom: -15px
+		.color
+			width: 100%
+			// width: 50%
+			// padding: 0px 10px
+			a
+				+flexbox
+				margin-bottom: 15px
+				.color-img
+					width: 14px
+					height: 14px
+					+bor-rad(50px)
+					+pos(rel,null)
+				.color-name
+					+fs(14rem)
+					line-height: 14px
+					// font-weight: 600
+					margin-left: 10px
+					color: darken($white,40%)
+				&:hover
+					.color-name
+						color: $white
+				&.active
+					.color-name
+						color: $white
+						font-weight: 500
+	.filter-range
+		// width: 100%
+		margin: 0px 10px
+		+pos(rel,null)
+		&:before, &:after
+			content: ''
+			display: table
+			width: 100%
+			clear: both
+		#slider-range
+			width: 100%
+			height: 4px
+			background: color-rgba($white,0.3)
+			margin: 15px 0 15px
+			+pos(rel,null)
+			+transition(all,0s)
+		.ui-widget-header
+			background: $red
+			position: absolute
+			z-index: 1
+			display: block
+			top: 0px
+			height: 4px
+			+transition(all,0s)
+		.ui-slider-handle
+			position: absolute
+			z-index: 2
+			cursor: default
+			touch-action: none
+			top: 2px
+			margin-left: -0.6em
+			left: 15%
+			width: 14px
+			height: 14px
+			+bor-rad(50%)
+			background: $red
+			border: 2px solid $red
+			z-index: 1
+			cursor: pointer
+			+transition(all,0s)
+			+transform(translateY(-50%))
+			&:hover
+				background: $red
+		.min, .max
+			width: 16px
+			height: 16px
+			background: darken($white,60%)
+			box-shadow: 0px 0px 5px -1px rgba(0,0,0,.7)
+			z-index: 1
+			cursor: pointer
+			+transition(all,0.5s)
+			+transform(translateY(-50%))
+			&:hover
+				background: $main
+		.min
+			+pos(abs, 50% null null 0)
+		.max 
+			+pos(abs, 50% 0 null null)
+	.price-range
+		// text-transform: uppercase
+		+fs(13rem)
+		color: darken($white,40%)
+		// font-weight: bold
+		margin-left: -10px
+	.min-input, .max-input
+		display: inline-block
+		margin: 0 5px
+		font-weight: 500
+		+fs(14rem)
+		color: $white

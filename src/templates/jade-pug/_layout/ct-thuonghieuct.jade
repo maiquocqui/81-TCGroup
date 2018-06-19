@@ -1,0 +1,211 @@
+section.sub-header.clearfix
+	.container
+		.clearfix
+		.brand-logo
+			a(href="#!")
+				img(src="img/brand/samsung2.png", alt="")
+		nav.site-nav
+			ul
+				li
+					a(href="#section-1" rel='m_PageScroll2id') Giới thiệu
+				li
+					a(href="#section-2" rel='m_PageScroll2id') Sản phẩm
+				//- li
+					a(href="#section-3" rel='m_PageScroll2id') Kiểm tra chính hãng
+				li
+					a(href="#section-4" rel='m_PageScroll2id') Đại lý
+				li
+					a(href="#section-5" rel='m_PageScroll2id') Khách hàng
+				li
+					a(href="#section-6" rel='m_PageScroll2id') Chứng nhận
+		.clearfix
+section.breadcrumb-wrap
+	.container
+		ol.breadcrumb(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books')
+					span(itemprop='name') Trang chủ
+				meta(itemprop='position', content='1')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Sản phẩm
+				meta(itemprop='position', content='2')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Samsung
+				meta(itemprop='position', content='3')
+			//- li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Khóa cửa điện tử
+				meta(itemprop='position', content='4')
+	//- .breadcrumb-img
+		img(src="img/breadcrumb/1.jpg", alt="")
+		h3.pagename
+section.brand-page.clearfix
+	.container
+		.brand-banner#section-1
+			.img
+				img(src="img/brand/img1.jpg", alt="")
+			.caption
+				h1.brand-logo.text-center
+					img(src="img/brand/samsung.png", alt="Samsung" title="Samsung")
+				.brand-des.text-center Cách dễ nhất để biến ngôi nhà của bạn thành một ngôi nhà thông minh
+				.product-check
+					//- .page-title.text-center Kiểm tra chính hãng
+					.imei-check
+						input(type="text" placeholder="Nhập số serial để kiểm tra chính hãng...")
+						button.btn-check Kiểm tra
+		.brand-category#section-2
+			.item
+				.category
+					figure
+						a.category-img(href="#!")
+							img(src="img/product/6.png", alt="")
+						figcaption
+							h2.category-name 
+								a(href="#!") Khóa cửa điện tử
+							.category-des Chúng tôi đã có nhiều năm kinh nghiệm và chuyên môn để quản lý các thiết bị bảo mật ở Việt Nam, đã có được sự tự tin và hợp tác kinh doanh từ các nhà phát triển, các công ty kiến ​​trúc và thiết kế.
+							.link-wrap
+								a.link(href="#!") Xem sản phẩm
+			.item
+				.category
+					figure
+						a.category-img(href="#!")
+							img(src="img/product/7.png", alt="")
+						figcaption
+							h2.category-name 
+								a(href="#!") Màn hình - CHuông cửa
+							.category-des Các kỹ sư và kỹ thuật viên có kinh nghiệm luôn ở cạnh công nghệ mới nhất, cam kết bán hàng và quản trị nhân sự cung cấp dịch vụ khách hàng đạt yêu cầu, chu đáo.
+							.link-wrap
+								a.link(href="#!") Xem sản phẩm
+			.item
+				.category
+					figure
+						a.category-img(href="#!")
+							img(src="img/product/8.png", alt="")
+						figcaption
+							h2.category-name 
+								a(href="#!") True-I Smarthome
+							.category-des Là nhà phân phối độc quyền của SAMSUNG Digital Door Lock, Audio Video Intercom & Home Automation System, chúng tôi cố gắng thúc đẩy cuộc sống hiện đại tự động với phong cách và sự tiện lợi.
+							.link-wrap
+								a.link(href="#!") Xem sản phẩm
+	//- .product-check#section-3
+		.page-title.text-center Kiểm tra chính hãng
+		.imei-check
+			input(type="text" placeholder="Nhập số serial...")
+			button.btn-check Kiểm tra
+	.primary-store#section-4
+		.container
+			.page-title.text-center Hệ thống đại lý chính hãng
+			.store-list
+				.row
+					.col-12.col-sm-6.col-md-3.col-lg-2
+						.store
+							figure
+								a.store-logo(href="#!")
+									img(src="img/favicon.png", alt="")
+									.store-star <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+								figcaption
+									h3.store-name Cửa hàng 123 Trần Hưng Đạo
+					.col-12.col-sm-6.col-md-3.col-lg-2
+						.store
+							figure
+								a.store-logo(href="#!")
+									img(src="img/favicon.png", alt="")
+									.store-star <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+								figcaption
+									h3.store-name Cửa hàng 123 Trần Hưng Đạo
+					.col-12.col-sm-6.col-md-3.col-lg-2
+						.store
+							figure
+								a.store-logo(href="#!")
+									img(src="img/favicon.png", alt="")
+									.store-star <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+								figcaption
+									h3.store-name Cửa hàng 123 Trần Hưng Đạo
+					.col-12.col-sm-6.col-md-3.col-lg-2
+						.store
+							figure
+								a.store-logo(href="#!")
+									img(src="img/favicon.png", alt="")
+									.store-star <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+								figcaption
+									h3.store-name Cửa hàng 123 Trần Hưng Đạo
+					.col-12.col-sm-6.col-md-3.col-lg-2
+						.store.warning
+							figure
+								a.store-logo(href="#!")
+									img(src="img/favicon.png", alt="")
+									.store-star <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+								figcaption
+									h3.store-name Cửa hàng 123 Trần Hưng Đạo
+					.col-12.col-sm-6.col-md-3.col-lg-2
+						.store.warning
+							figure
+								a.store-logo(href="#!")
+									img(src="img/favicon.png", alt="")
+									.store-star <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+								figcaption
+									h3.store-name Cửa hàng 123 Trần Hưng Đạo
+					.col-12.col-sm-6.col-md-3.col-lg-2
+						.store.danger
+							figure
+								a.store-logo(href="#!")
+									img(src="img/favicon.png", alt="")
+									.store-star <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+								figcaption
+									h3.store-name Cửa hàng 123 Trần Hưng Đạo
+					.col-12.col-sm-6.col-md-3.col-lg-2
+						.store.banned
+							figure
+								a.store-logo(href="#!")
+									img(src="img/favicon.png", alt="")
+									.store-star <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+								figcaption
+									h3.store-name Cửa hàng 123 Trần Hưng Đạo
+					.col-12.col-sm-6.col-md-3.col-lg-2
+						.store.banned
+							figure
+								a.store-logo(href="#!")
+									img(src="img/favicon.png", alt="")
+									.store-star <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+								figcaption
+									h3.store-name Cửa hàng 123 Trần Hưng Đạo
+					.col-12.col-sm-6.col-md-3.col-lg-2
+						.store.banned
+							figure
+								a.store-logo(href="#!")
+									img(src="img/favicon.png", alt="")
+									.store-star <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+								figcaption
+									h3.store-name Cửa hàng 123 Trần Hưng Đạo
+	.brand-project.clearfix#section-5
+		.container
+			.page-title.text-center Các dự án đã sử dụng sản phẩm
+			.project-slide
+				.item
+					.img
+						img(src="img/project/1.jpg", alt="")
+					.caption
+						.title ANA MANDARA HUE RESORT & SPA 
+						.des Giải pháp điện tử tổng thể
+				.item
+					.img
+						img(src="img/project/1.jpg", alt="")
+					.caption
+						.title ANA MANDARA HUE RESORT & SPA 
+						.des Giải pháp điện tử tổng thể
+				.item
+					.img
+						img(src="img/project/1.jpg", alt="")
+					.caption
+						.title ANA MANDARA HUE RESORT & SPA 
+						.des Giải pháp điện tử tổng thể
+	.brand-cert.clearfix#section-6
+		.container
+			.page-title.text-center Chứng nhận đại lý ủy quyền
+			.cert-img
+				img(src="img/brand/cert.jpg", alt="")
+			.cert-des.content
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a debitis expedita quod, harum fuga repellat libero voluptas blanditiis, voluptate distinctio temporibus natus neque corrupti, nobis impedit atque facere! Doloremque maiores illo delectus, eligendi officia eius et hic eaque illum fugiat ipsa ea explicabo sed. Eligendi voluptates sequi fuga vitae!
+				a(href="#!") https://www.samsungsds.com
